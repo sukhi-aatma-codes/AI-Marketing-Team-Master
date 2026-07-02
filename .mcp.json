@@ -1,0 +1,70 @@
+{
+  "mcpServers": {
+    "ideogram": {
+      "command": "npx",
+      "args": ["@sunwood-ai-labs/ideagram-mcp-server"],
+      "env": {
+        "IDEOGRAM_API_KEY": "${IDEOGRAM_API_KEY}",
+        "IMAGE_OUTPUT_DIR": "output/ideogram_output"
+      }
+    },
+    "canva": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.canva.com/mcp"]
+    },
+    "notebooklm": {
+      "command": "npx",
+      "args": ["-y", "notebooklm-mcp-server@latest"]
+    },
+    "flux": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.bfl.ai"]
+    },
+    "windsor": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.windsor.ai/"]
+    },
+    "exa": {
+      "command": "npx",
+      "args": ["-y", "exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      }
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      }
+    },
+    "nano-banana": {
+      "command": "npx",
+      "args": ["-y", "nano-banana-mcp"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+      }
+    },
+    "gpt-image": {
+      "command": "npx",
+      "args": ["-y", "@cloudwerxlab/gpt-image-1-mcp"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      }
+    },
+    "unsplash": {
+      "command": "npx",
+      "args": ["-y", "@jeff_kit/unsplash-mcp-server"],
+      "env": {
+        "UNSPLASH_ACCESS_KEY": "${UNSPLASH_ACCESS_KEY}"
+      }
+    },
+    "pexels": {
+      "command": "npx",
+      "args": ["-y", "mcp-pexels"],
+      "env": {
+        "PEXELS_API_KEY": "${PEXELS_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# Ignore outputs and intermediate working files
+output/
+ideogram_output/
+
+# Ignore personal brand data drops (keep reference templates)
+_samples/*
+!_samples/_reference-examples/
+_context/*
+!_context/Brand_Insights_Ledger.md
+
+# Ignore local configuration and agent session memories
+.claude/agent-memory/
+.claude/settings.local.json
+
+# Ignore scratch files and logs
+validation_report.txt
+dry_run_changes.txt
+references_list.txt
+**/scratch/
