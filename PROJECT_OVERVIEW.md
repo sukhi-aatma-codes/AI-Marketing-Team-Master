@@ -1,8 +1,10 @@
-# 🧠 AI Marketing Team Master — Project Overview
+# 🧠 Foundry Collective — Project Overview
 
 ## What This Project Is
 
-**AI Marketing Team Master** is a **personal, portable marketing operating system** built for Claude (Anthropic's AI) — designed to function as the user's marketing department wherever they work, now or at a future employer. Each sub-agent represents a sub-function within that marketing department (campaign strategy, content, creative, SEO, PR, social, lead gen, podcast/webinar programs, etc.), and together they produce everything a marketing org needs: strategy, content, ads, visuals, research, and reports.
+**Foundry Collective** is a **personal, portable marketing operating system** built for Claude (Anthropic's AI) — designed to function as the user's marketing department wherever they work, now or at a future employer. Each sub-agent represents a sub-function within that marketing department (campaign strategy, content, creative, SEO, PR, social, lead gen, podcast/webinar programs, etc.), and together they produce everything a marketing org needs: strategy, content, ads, visuals, research, and reports.
+
+The workspace directory and internal file paths still read `AI Marketing Team Master` (see Workspace Conventions in `CLAUDE.md`) — that's the technical/folder name. **Foundry Collective** is the name of the system itself, the one used in conversation and in any materials describing it to others.
 
 It's designed to move with the user across employers — just swap the `_context\` files when changing organizations and every agent and skill adapts automatically. No hardcoded employer/brand info anywhere.
 
@@ -229,6 +231,16 @@ This means **the team gets smarter over time** as campaigns run and user feedbac
 
 ## 📝 Changelog
 
+### v3.7 — 2026-07-06
+
+#### Named the project — Foundry Collective
+
+The system now has a name the user calls it by in conversation and shares with colleagues:
+**Foundry Collective**. This is a naming/branding update only — no change to the workspace
+directory name, agent/skill files, or `_context\` mechanics. `AI Marketing Team Master` remains
+the technical folder/path name (see Workspace Conventions in `CLAUDE.md`); Foundry Collective is
+the name used when describing the system to people rather than to the filesystem.
+
 ### v3.6 — 2026-06-30
 
 #### Reframing + 2 new skills + 1 enriched, from coreyhaines31/marketingskills
@@ -341,4 +353,4 @@ Each skill: reads the existing context file first (merge, not replace by default
 
 ---
 
-*Last updated: 2026-06-30*
+*Last updated: 2026-07-06*

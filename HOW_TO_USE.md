@@ -1,4 +1,4 @@
-# How to Use This Workspace
+# How to Use Foundry Collective
 
 A practical reference for everything this workspace can do: 13 agents, 37 skills, one example
 prompt for each. If you've never used this workspace before, read **Orientation** first. If
@@ -9,8 +9,10 @@ Catalog** or **Skill Catalog** below.
 
 ## Orientation
 
-This is the user's personal marketing operating system — it functions as their marketing
-department wherever they work. It does nothing employer-specific until `_context\` is
+**Foundry Collective** is the user's personal marketing operating system — it functions as their
+marketing department wherever they work. (The workspace directory/path is still named
+`AI Marketing Team Master` — that's the technical folder name; Foundry Collective is what the
+system is called in conversation.) It does nothing employer-specific until `_context\` is
 populated — six `Brand_*.md` files plus a shared `Brand_Insights_Ledger.md` define who the
 employer/brand is, how it talks, what it sells, who it sells to, and what its visuals look like.
 Every agent and skill reads those files at runtime instead of assuming a brand identity.
