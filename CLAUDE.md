@@ -19,7 +19,7 @@ d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\
 ├── .claude\skills\     ← project-local Claude skills (brand-agnostic), registered with the Skill tool
 └── output\             ← streamlined output directory
     ├── output\ads\            ← ad copy, creative briefs, paid campaign assets
-    ├── output\pages\          ← landing pages, web copy
+    ├── output\pages\          ← blog posts, landing pages, web copy
     ├── output\presentations\  ← pitch decks, sales decks, internal decks
     ├── output\reports\        ← marketing reports, analyses
     ├── output\seo\            ← SEO briefs, technical audits, keyword research, AEO/citation audits
@@ -59,6 +59,7 @@ Save finished outputs to the folder that matches the deliverable type:
 | Deliverable | Folder |
 |---|---|
 | Ad copy, creative briefs, paid campaign assets | `output\ads\` |
+| Blog posts and articles (all `blog-writer` outputs) | `output\pages\` |
 | Landing pages, web/site copy | `output\pages\` |
 | Decks (sales, pitch, internal) | `output\presentations\` |
 | Marketing reports, analyses, audits | `output\reports\` |

@@ -38,6 +38,7 @@ Generate the source-of-truth files in `_context\` using structured templates:
 - [ ] **2.5 `Brand_Growth_Marketing_Context.md`:**
   * Define active goals, key channels, target metric baselines, and conversion metrics.
 - [ ] **2.6 `Brand_Style_Reference.md` (conditional):** Only if real creative samples were provided — invoke `build-brand-style-reference` to produce the generative visual style library. If no samples exist, skip and flag as an open gap in Phase 4 rather than inventing styles.
+- [ ] **2.7 `Brand_Insights_Ledger.md` (reset + seed):** Reset every ledger section to `* No entries yet.` so the prior brand's intelligence does not carry over, then seed Section 1 (Core Buyer Personas & Objections) with the ICPs, buying triggers, and objections discovered during onboarding. Mark inferred items `[ASSUMPTION]`.
 
 ### Phase 3: Integrity & Consistency Check
 Perform cross-file compliance checks:
