@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Audience:** Developers & Agent Engineers  
-**Location:** `skills\`  
+**Location:** `.claude\skills\`  
 
 This document outlines the strict guidelines and contracts that all custom developer skills in this workspace must follow. Adhering to these rules ensures that skills remain modular, reusable, robust, and highly predictable for downstream sub-agents and orchestrators.
 
@@ -18,7 +18,7 @@ This document outlines the strict guidelines and contracts that all custom devel
    * Every skill's runner script must accept parameters via standardized environment variables, JSON config files, or standard CLI arguments.
    * Example CLI parameter pattern:
      ```bash
-     python skills/my-skill/run.py --brand-context "./_context/Brand_Context.md" --output-dir "./reports/"
+     python .claude/skills/my-skill/run.py --brand-context "./_context/Brand_Context.md" --output-dir "./reports/"
      ```
 
 3. **Deterministic Output Contracts:**
@@ -47,9 +47,9 @@ This document outlines the strict guidelines and contracts that all custom devel
 
 ## 2. Directory Structure for Skills
 
-Each custom skill in the `skills\` folder must be self-contained:
+Each custom skill in the `.claude\skills\` folder must be self-contained:
 ```
-skills/my-custom-skill/
+.claude/skills/my-custom-skill/
 ├── SKILL_README.md       ← Comprehensive brief, requirements, parameters description
 ├── run.py / run.sh       ← Execution entry-point wrapper
 ├── src/                  ← Core implementation source code

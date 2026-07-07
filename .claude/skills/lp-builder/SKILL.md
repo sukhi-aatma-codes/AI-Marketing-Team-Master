@@ -3,7 +3,7 @@ name: lp-builder
 description: >
   Use this skill whenever the user wants to create a landing page, service page, campaign
   page, or any web page designed to convert visitors. Trigger on requests like "build a
-  landing page for X", "write a service page for our insurance outsourcing", "create a
+  landing page for X", "write a service page for one of our service lines", "create a
   campaign LP for Y", "make a page for this paid campaign", "write copy for a landing page
   on Z", or any mention of landing pages, service pages, or conversion-focused web copy.
   Produces a structured `.md` with all copy organized by section, plus a fully coded HTML
@@ -51,10 +51,10 @@ Write all sections in order. Each section has a specific job — don't blend the
 **Job:** Stop the visitor, confirm they're in the right place, give them one reason to scroll.
 
 - **H1:** Outcome-led, 55–65 chars. Names the ICP's problem or desired outcome.
-  Never leads with the service name. "Transform Your Insurance Back-Office" not "Insurance BPO Services"
+  Never leads with the service name. "Cut Your Reporting Week in Half" not "Business Intelligence Services"
 - **Subheadline:** 1–2 sentences expanding the H1. Specifies who this is for and what they get.
 - **Primary CTA button:** Action verb + context. "Book a Free Assessment" / "Talk to Our Team" / "Get the Playbook"
-- **Trust signals** (optional, below CTA): "500+ clients · 25+ countries · Everest Group recognized"
+- **Trust signals** (optional, below CTA): client count, geographies served, analyst or industry recognition — pull real ones from `Brand_Context.md` / `Brand_Product_Offerings.md`, never invent them
 
 For paid pages: H1 must match or closely reflect the ad headline (message match).
 
@@ -72,15 +72,15 @@ For paid pages: H1 must match or closely reflect the ad headline (message match)
 - Lead with the transformation outcome — one sentence naming the specific result the ICP gets and the timeframe (pull from Brand_Product_Offerings.md)
 - Explain the approach (briefly) — what makes this different
 - 3 differentiators max. Each in bold label + 1–2 sentence explanation.
-- Reference the D.A.T. framework or specific service methodology where relevant
-  (check `Brand_Product_Offerings.md` for the correct description)
+- Reference the brand's named methodology or framework where relevant
+  (check `Brand_Product_Offerings.md` for the correct name and description)
 
 ### Proof section
 **Job:** Remove doubt. Show that this has worked for people like the visitor.
 
 - Use only proof points from `_context/Brand_Product_Offerings.md` or user-provided data
 - Options: client metrics ("reduced processing time by 40%"), client quote (if provided),
-  credential (Everest Group, ISO), client logos (if user provides), case study teaser
+  credential (analyst recognition, certifications), client logos (if user provides), case study teaser
 - Flag any missing proof points as `[DRAFT — confirm before publishing: ...]`
 - For paid pages: 1–2 proof elements above fold. For organic: can be a full social proof section.
 

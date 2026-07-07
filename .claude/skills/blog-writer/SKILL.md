@@ -4,7 +4,7 @@ description: >
   Use this skill whenever the user wants to write a blog post, article, or long-form piece
   of content. Trigger on requests like "write a blog post about X", "draft an article on Y",
   "create content for our blog on Z", "write a thought leadership piece", "create a post
-  about insurance automation trends", or any request for a written article intended for
+  about industry trends in our vertical", or any request for a written article intended for
   publication. This skill produces a fully upload-ready output — slug, all CMS meta fields,
   HTML file, and Word doc — nothing left to do before publishing. It performs SERP research
   before writing and optimizes for SEO, AEO (AI answer engines), and GEO (generative engine
@@ -49,8 +49,8 @@ Do this research before touching the outline. Real research, real sources — no
 - What content gaps exist — what do the top results miss that the brand could own?
 
 **Source research:**
-- Search for supporting statistics, recent data, and industry research (Gartner, Everest Group,
-  McKinsey, APCIA, industry trade publications)
+- Search for supporting statistics, recent data, and industry research (Gartner, Forrester,
+  McKinsey, plus the analyst firms and trade publications specific to the brand's vertical)
 - Find 3–5 citable external sources with URLs
 - Find 2–3 internal linking targets: brand service pages or blog posts to link to naturally
 
@@ -115,7 +115,7 @@ read the full post. Format as a `<ul>` in HTML. Each bullet = one complete thoug
 
 - TL;DR and FAQ use question + direct concise answer format — this is what AI answer engines index
 - H2s must be able to stand alone as complete thoughts (not "Why This Matters" — instead
-  "Why Insurance Carriers Lose 30% of Back-Office Time to Manual Processing")
+  "Why Mid-Market Teams Lose 30% of Their Week to Manual Reporting")
 - No filler transitions or padding paragraphs — every sentence carries information
 - Avoid "In this article, we will discuss..." — get to the point immediately
 
@@ -123,10 +123,10 @@ read the full post. Format as a `<ul>` in HTML. Each bullet = one complete thoug
 
 Load `Brand_Voice_Guide.md` and apply throughout:
 - Lead with transformation outcomes, not service descriptions
-- Use power verbs: transform, accelerate, reimagine, empower, optimize
-- Ground every claim: pair "we reduce claims cycle time" with the specific proof (30–50% in 90 days)
+- Use the power verbs defined in `Brand_Voice_Guide.md` — do not substitute a generic list
+- Ground every claim: pair any outcome statement with a specific proof point from `_context\` (or flag `[SOURCE NEEDED]`)
 - Write to "you" (the reader) — never "the client" or "organizations"
-- No banned words: seamless, leverage, world-class, cutting-edge, offshore (as primary identifier)
+- Apply the banned-words list from `Brand_Voice_Guide.md` — no exceptions
 
 ## Output files
 

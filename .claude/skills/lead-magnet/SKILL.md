@@ -111,9 +111,9 @@ partial preview), form fields (email-only vs. email+role).
 
 ### Step 1 — Title and premise
 Title formula options:
-- Problem-led: "The Hidden Cost of Manual Claims Processing: A CFO's Guide"
-- Outcome-led: "From Back-Office Bottleneck to Operational Advantage: 5 Strategies for Insurance COOs"
-- Diagnostic: "Is Your Insurance Back-Office Ready for 2026? A Self-Assessment for Operations Leaders"
+- Problem-led: "The Hidden Cost of Manual Reporting: A CFO's Guide"
+- Outcome-led: "From Bottleneck to Advantage: 5 Strategies for Operations Leaders"
+- Diagnostic: "Is Your Marketing Stack Ready for Next Year? A Self-Assessment for Growth Teams"
 - Number-led: "7 Signs Your Finance Function Is Ready for Intelligent Automation"
 
 Write a 2–3 sentence premise statement: the problem this piece addresses, why it matters now,

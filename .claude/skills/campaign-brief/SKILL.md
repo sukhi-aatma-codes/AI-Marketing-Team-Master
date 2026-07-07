@@ -4,7 +4,7 @@ description: >
   Use this skill whenever the user wants to create a campaign brief, plan a marketing campaign,
   or align stakeholders on a campaign strategy before execution begins. Trigger on requests
   like "create a campaign brief for X", "plan a campaign around Y", "brief out this campaign",
-  "we need a campaign plan for Z", "build a campaign strategy for our insurance content push",
+  "we need a campaign plan for Z", "build a campaign strategy for our content push",
   or any request to document a campaign's goals, audience, channels, messaging, creative
   direction, and KPIs in one place. This is the starting point for any planned campaign —
   run this before ad-creative, blog-writer, social-copy, or lp-builder when launching
@@ -29,7 +29,7 @@ Read these context files every time:
 ## Gather inputs
 
 Ask the user for:
-1. **Campaign goal:** What is this campaign trying to achieve? (Be specific — "increase MQLs from insurance COOs by 20%" not "generate leads")
+1. **Campaign goal:** What is this campaign trying to achieve? (Be specific — "increase MQLs from operations leaders by 20%" not "generate leads")
 2. **Service line:** Which product or service does this campaign support?
 3. **Target ICP:** Who is the primary audience? (Role, vertical, company size, geography)
 4. **Channels:** Which channels are in scope? (LinkedIn, Google, email, content, events, etc.)
@@ -55,8 +55,9 @@ State the goal in SMART format:
 - **Relevant:** How does this goal connect to the business growth vectors in `Brand_Growth_Marketing_Context.md`?
 - **Time-bound:** By when?
 
-Example: "Generate 50 MQLs from insurance carriers (COO/VP Ops titles) in Australia and the
-UK via LinkedIn Sponsored Content and Google Search, within 60 days of launch."
+Example: "Generate 50 MQLs from mid-market companies in the brand's primary vertical (VP Ops /
+Head of Growth titles) in the target geographies via LinkedIn Sponsored Content and Google
+Search, within 60 days of launch."
 
 ### Section 3 — Audience
 Pull the ICP profile from `Brand_Product_Offerings.md`. Document:

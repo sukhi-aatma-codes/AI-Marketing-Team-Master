@@ -67,7 +67,7 @@ Mark it: [SYNTHESIZED — confirm with client]]
 
 ## Target Verticals
 [Bulleted list of the industries or sectors the brand serves. Name them specifically —
-not "enterprise" but "mid-market insurance carriers" or "Series B SaaS companies".]
+not "enterprise" but "mid-market logistics providers" or "Series B SaaS companies".]
 
 ## Buyer Profiles (ICPs)
 [Per ICP: role title, company size/type, primary pain point they hire this brand to solve,

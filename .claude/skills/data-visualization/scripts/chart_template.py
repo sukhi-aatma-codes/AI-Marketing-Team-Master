@@ -27,10 +27,11 @@ LIGHT_GREY      = "#E8E8E8"
 # Color palette for multi-series charts (extend as needed)
 PALETTE = [BRAND_PRIMARY, BRAND_ACCENT, CHARCOAL, "#D4D4D4", "#6B7280"]
 
-# ─── TYPOGRAPHY ────────────────────────────────────────────────────────────────
-# Try to load Montserrat; fall back gracefully if not installed
+# ─── TYPOGRAPHY — load from _context/Brand_Style.md before use ────────────────
+BRAND_FONT = "REPLACE_WITH_BRAND_FONT"
+# Try to load the brand font; fall back gracefully if not installed
 try:
-    rcParams["font.family"] = "Montserrat"
+    rcParams["font.family"] = BRAND_FONT
 except Exception:
     rcParams["font.family"] = "DejaVu Sans"
 

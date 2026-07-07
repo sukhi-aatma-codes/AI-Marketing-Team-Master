@@ -65,7 +65,7 @@ When in doubt, start with the agent — agents invoke the right skills for you.
                                  │ invokes via the Skill tool
                                  ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│  37 SKILLS  (skills\)  —  single-purpose execution modules         │
+│  37 SKILLS  (.claude\skills\)  —  single-purpose execution modules │
 │  blog-writer · social-copy · ad-creative · lp-builder ·             │
 │  lead-magnet · email-copy · keyword-research · market-research ·    │
 │  campaign-brief · branded-deck · abm-account-plan ·                 │

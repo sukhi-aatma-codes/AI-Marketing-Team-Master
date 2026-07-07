@@ -113,7 +113,7 @@ Retrieve the brand kit ID. Reuse this ID for all slides in the same session.
 ```
 mcp__canva__generate-design
 ```
-Describe the slide fully: background colour (exact hex), font (Montserrat, exact weight), all
+Describe the slide fully: background colour (exact hex), font (the brand typeface from Brand_Style.md, exact weight), all
 text content and hierarchy, layout structure, and any Ideogram-generated visual to incorporate.
 Reference the style spec from Brand_Style_Reference.md for spacing, rule placement, and do-nots.
 Include: brand primary color, brand accent color, and brand font at the correct weight (all from Brand_Style.md).
@@ -138,7 +138,7 @@ Export at the target resolution. Save to `output/social/` folder using the namin
 output/social/social-<topic-slug>-slide-<N>-<yyyy-mm-dd>.png
 ```
 
-Example: `output/social/social-insurance-backoffice-slide-1-2026-05-09.png`
+Example: `output/social/social-q3-launch-slide-1-2026-05-09.png`
 
 For single images: `output/social/social-<topic-slug>-<yyyy-mm-dd>.png`
 
@@ -149,9 +149,10 @@ For single images: `output/social/social-<topic-slug>-<yyyy-mm-dd>.png`
 Handle each tool's failure independently — they are separate systems.
 
 **If Ideogram is unavailable:**
-- Tell the user clearly which styles are affected (E1, E2, E3, A2 photo element, A5 optional element).
-- Offer to continue: typographic styles (A1, A3, A4, A6, A7) can be completed fully through
-  Canva alone. Photo-dependent styles are blocked until Ideogram is restored.
+- Tell the user clearly which of the requested styles are affected (any photo-blend or
+  full-photo-bleed archetype per `Brand_Style_Reference.md`).
+- Offer to continue: typographic-only and diagram/framework styles can be completed fully
+  through Canva alone. Photo-dependent styles are blocked until Ideogram is restored.
 
 **If Canva is unavailable:**
 - Tell the user clearly. Canva handles all text and export — this is a full blocker for every style.
@@ -171,7 +172,7 @@ For each finished slide, confirm before reporting completion:
 
 - [ ] Background colour matches the style spec exactly
 - [ ] Headline text is readable and not garbled
-- [ ] Font is Montserrat at the correct weight for the style
+- [ ] Font is the brand typeface (per Brand_Style.md) at the correct weight for the style
 - [ ] Brand wordmark is present (position per Brand_Style_Reference.md)
 - [ ] Only one idea per slide — not crowded
 - [ ] File is saved to `output/social/` with the correct filename and date

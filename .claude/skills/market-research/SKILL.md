@@ -3,8 +3,8 @@ name: market-research
 description: >
   Use this skill whenever the user wants to research a market, industry vertical, competitor,
   or topic to inform a marketing or business strategy decision. Trigger on requests like
-  "research the insurance BPO market", "who are our competitors in X", "what's happening
-  in the pharma outsourcing space", "do a market analysis of Y", "give me a competitive
+  "research the HR tech market", "who are our competitors in X", "what's happening
+  in the supply chain software space", "do a market analysis of Y", "give me a competitive
   landscape for Z", or any request for market intelligence, competitor analysis, or industry
   sizing. Always use this skill before campaign briefs, keyword research, or content strategy
   work on a new vertical — it should be the first step in any new market or topic exploration.
@@ -55,7 +55,7 @@ For each relevant competitor (up to 5):
 Search for:
 - What buyers in this market are searching for (intent signals)
 - Common pain points appearing in reviews, forums, or industry publications
-- Analyst commentary on buyer priorities (Gartner, Everest Group, McKinsey)
+- Analyst commentary on buyer priorities (Gartner, Forrester, McKinsey, plus analysts specific to the brand's vertical)
 
 ### Step 4 — Brand opportunity mapping
 Using the brand context files, identify:

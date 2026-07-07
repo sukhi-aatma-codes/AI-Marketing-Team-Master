@@ -60,7 +60,7 @@ Go beyond the numbers. For each insight:
 - **What it means for future campaigns** (the implication)
 
 Avoid generic insights ("CTR was low"). Make them specific and actionable ("LinkedIn Sponsored
-Content CTR was 0.3% vs. 0.5% benchmark — the insurance-specific creative outperformed the
+Content CTR was 0.3% vs. 0.5% benchmark — the vertical-specific creative outperformed the
 generic service ad by 2x, suggesting vertical-specific creative should be the default").
 
 ### Step 5 — Recommendations

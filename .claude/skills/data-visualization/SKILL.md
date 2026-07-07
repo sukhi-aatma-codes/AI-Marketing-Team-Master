@@ -83,18 +83,19 @@ chart type. The script produces a PNG with identical brand styling.
 Save the adapted script as `output/reports/dataviz-<topic>-<date>.py`
 
 Only produce this if the user asks for a static image, or if the visualization is destined
-for `social-creative-designer` (A3 Data Signal style).
+for `social-creative-designer` (the brand's data-focused style from `Brand_Style_Reference.md`).
 
 ### Step 5 — Social handoff (optional)
 If the user wants a social-ready version of the chart, pass the chart spec and data to
-`social-creative-designer` with style **A3 Data Signal**. The social-creative-designer skill
-handles the branded carousel/single-image output — this skill handles the data layer only.
+`social-creative-designer`, using the data/stat-focused style defined in the active brand's
+`Brand_Style_Reference.md`. The social-creative-designer skill handles the branded
+carousel/single-image output — this skill handles the data layer only.
 
 ## Bundled script
 
-`skills/data-visualization/scripts/chart_template.py` — matplotlib + Plotly starter with:
-- Brand color palette pre-configured
-- Montserrat font loaded (falls back to system sans-serif)
+`.claude/skills/data-visualization/scripts/chart_template.py` — matplotlib + Plotly starter with:
+- Brand color and font placeholders — set them from `_context/Brand_Style.md` before running
+- Falls back to system sans-serif if the brand font isn't installed
 - Brand grid style (light grey horizontal rules, white background)
 - Standard figure size, DPI, tight layout
 

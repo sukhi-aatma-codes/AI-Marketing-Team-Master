@@ -32,7 +32,7 @@ Generate the source-of-truth files in `_context\` using structured templates:
 - [ ] **2.2 `Brand_Voice_Guide.md`:**
   * Define tone dimensions, writing style spectrum (e.g. conversational vs academic), list of banned jargon words, and writing rules.
 - [ ] **2.3 `Brand_Style.md`:**
-  * Define digital design hex codes, Montserrat or equivalent font pairing, grid spacing, safety boundaries, and approved image style patterns.
+  * Define digital design hex codes, the brand's actual font pairing (as parsed from its site or style guide), grid spacing, safety boundaries, and approved image style patterns.
 - [ ] **2.4 `Brand_Product_Offerings.md`:**
   * Categorize service lines, technical descriptions, price tiers, buyer persona targets, and specific pain points solved.
 - [ ] **2.5 `Brand_Growth_Marketing_Context.md`:**

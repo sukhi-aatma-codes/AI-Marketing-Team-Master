@@ -4,7 +4,7 @@ description: >
   Use this skill whenever the user wants to identify, cluster, or prioritize keywords for SEO
   or SEM — including SERP analysis to understand what's currently ranking and what gaps exist.
   Trigger on requests like "do keyword research for X", "what keywords should we target for Y",
-  "find me SEO keywords for our insurance outsourcing page", "what's ranking for Z", "build a
+  "find me SEO keywords for our services page", "what's ranking for Z", "build a
   keyword strategy for this topic", or any mention of search terms, rankings, SEO strategy,
   or content gaps. Use this after market-research and before blog-writer or lp-builder — it
   sits in the middle of the content pipeline.

@@ -4,7 +4,7 @@ description: >
   Use this skill whenever the user wants to write text copy for social media posts — the
   written content that accompanies a social image or stands alone as a text post. Trigger
   on requests like "write a LinkedIn post about X", "draft captions for this campaign",
-  "create social copy for our insurance automation content", "write 3 LinkedIn post variants",
+  "create social copy for our product launch", "write 3 LinkedIn post variants",
   "give me post copy for Y", or any request for social media text, captions, or post copy.
   This skill handles the written layer only — for the visual layer, use social-creative-designer.
   Works well in combination: social-copy for text, social-creative-designer for the image.
@@ -48,10 +48,12 @@ Every post follows: **Hook → Body → CTA → Hashtags**
 
 **Hook (first 1–2 lines — most important)**
 The hook must stop the scroll before the "see more" truncation. Options:
-- A bold stat: "40% of insurance back-office time goes to manual data entry."
-- A counterintuitive claim: "The biggest risk to your insurance operation isn't fraud."
-- A direct question to the ICP: "Can your team tell leadership what ops cost per policy?"
-- A short declarative: "Your back-office is costing more than you think. Here's the proof."
+- A bold stat: "60% of marketing budgets go to channels no one is measuring."
+- A counterintuitive claim: "Your biggest churn risk isn't your product."
+- A direct question to the ICP: "Can your team tell leadership what a qualified lead actually costs?"
+- A short declarative: "Your funnel is leaking more than you think. Here's the proof."
+
+(These are hook *shapes* — pull the actual stats, claims, and ICP language from `_context\`.)
 
 Never open with "We are excited to announce" or "Check out our latest..." — these are hook killers.
 
@@ -68,7 +70,7 @@ Never open with "We are excited to announce" or "Check out our latest..." — th
 
 **Hashtags**
 - LinkedIn: 3–5 tags. Mix: vertical (e.g. #B2BSaaS), function (e.g. #MarketingAutomation), brand hashtag (from Brand_Context.md if defined)
-- Instagram: 5–10 tags. Add broader reach tags (#Outsourcing, #B2BSaaS, #DigitalTransformation)
+- Instagram: 5–10 tags. Add broader reach tags (e.g. #B2B, #DigitalTransformation, plus the brand's vertical tags)
 - Facebook: 1–3 tags or none
 
 ## Produce 2–3 variants
@@ -83,10 +85,10 @@ Label variants clearly. Note which angle each is testing and which to try first.
 ## Brand voice rules
 
 From `Brand_Voice_Guide.md` — apply throughout:
-- Lead with outcomes and transformation, not services ("We transform claims operations" not "We do claims processing")
+- Lead with outcomes and transformation, not services (what the reader gets, not what the brand does)
 - Every claim needs a proof anchor — or mark it as aspirational clearly
 - Write to "you" — never "clients" or "businesses" in third person
-- No banned words: seamless, leverage, world-class, cutting-edge, resources (for people), vendor
+- Apply the banned-words list from `Brand_Voice_Guide.md` — no exceptions
 
 ## Output structure (`.md`)
 

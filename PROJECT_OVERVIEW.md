@@ -18,7 +18,7 @@ AI Marketing Team Master
 ├── _sop\             ← Standard operating procedures
 ├── _samples\         ← Raw brand input drop zone (PDFs, decks, images, ad archives)
 ├── _templates\       ← Active brand's reusable .pptx deck template + analysis
-├── skills\           ← 37 reusable execution modules
+├── .claude\skills\   ← 37 reusable execution modules
 └── .claude\agents\   ← 13 AI sub-agents with specialized roles
 ```
 

@@ -3,7 +3,7 @@ name: ad-creative
 description: >
   Use this skill whenever the user wants to create paid advertising copy — headlines,
   descriptions, and CTAs for Google Ads, LinkedIn Ads, display ads, or retargeting.
-  Trigger on requests like "write Google Ads for our insurance page", "create LinkedIn
+  Trigger on requests like "write Google Ads for our services page", "create LinkedIn
   ad copy for X", "build an ad creative for this campaign", "write paid ads for Y",
   "give me ad headlines for Z", or any request for paid media copy. Produces a character-
   count-verified variant matrix ready for upload. Visual ad component direction is included
@@ -126,7 +126,7 @@ Date: [yyyy-mm-dd]
 | D2 | ... | 90 | Expands H2 | ✓ |
 
 ### Display URL paths
-Path 1: [/Insurance] Path 2: [/Outsourcing]
+Path 1: [/ServiceLine] Path 2: [/Offer] — use real URL paths from the brand's site structure
 
 ### Recommended A/B test: H1 + D1 vs. H2 + D2
 Hypothesis: [...]

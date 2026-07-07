@@ -32,7 +32,7 @@ this principle in practice, not an apology.
 | `unsplash` | Stock photo search | Community package, API key | `UNSPLASH_ACCESS_KEY` |
 | `pexels` | Stock photo/video search | Community package, API key | `PEXELS_API_KEY` |
 
-Used by: `skills/image/SKILL.md`, `skills/social-creative-designer/SKILL.md`, `skills/ad-creative/SKILL.md`.
+Used by: `.claude/skills/image/SKILL.md`, `.claude/skills/social-creative-designer/SKILL.md`, `.claude/skills/ad-creative/SKILL.md`.
 
 ### Design assembly
 
