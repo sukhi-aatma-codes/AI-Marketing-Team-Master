@@ -106,6 +106,8 @@ This keeps the skill library portable to other brand workspaces with the same `_
 
 Thirteen sub-agents are available in `.claude/agents/`. Each one orchestrates multiple skills and applies judgment across steps — they are not wrappers around a single skill.
 
+**Single source of truth:** each agent's frontmatter `description` (surfaced in the Agent tool list) defines *when to delegate to it* — those triggers are deliberately not repeated here. This section covers only what the descriptions can't express: when NOT to delegate, the boundaries between agents, and the standard multi-agent pipelines. When editing an agent's scope, update its frontmatter description; only add here if a don't-delegate boundary changes.
+
 ### The core routing principle
 
 **Use a skill directly** when the task is a single, specific, bounded deliverable with a clear brief.
@@ -118,13 +120,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `brand-onboarder` (teal)
 
-**Delegate when:**
-- A new brand is being onboarded into this workspace from scratch
-- The user provides a brand URL and wants all six `_context\` files built
-- The active brand needs to be switched — existing context files belong to a different brand
-- An existing context file needs to be fully rebuilt (not just a section update)
-- Phrases like: "onboard this brand", "set up context for [URL]", "build context files for this company", "we're switching brands", "start fresh with this client"
-
 **Don't delegate when:**
 - Context files already exist and only one section of one file needs updating — run the relevant build-brand-* skill directly (e.g., `build-brand-products` to refresh the offerings file, or `build-brand-style-reference` to refresh just the visual style library)
 
@@ -133,12 +128,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 ---
 
 ### `campaign-strategist` (purple)
-
-**Delegate when:**
-- A new campaign, product launch, or demand generation program needs to be mapped from objective → strategy → deliverable specs
-- The user has a marketing objective or audience profile but hasn't defined channels, messaging, or what assets to build
-- Stakeholder alignment is needed before execution begins (produces the source-of-truth Campaign Strategy Document)
-- Phrases like: "we need a campaign for X", "plan a Q3 push around Y", "where do we start with this launch"
 
 **Don't delegate when:**
 - A campaign strategy already exists and the user wants a specific asset from it — route to `content-creator`, `creative-designer`, or invoke a skill directly
@@ -150,11 +139,7 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `market-researcher` (blue)
 
-**Delegate when:**
-- Competitive intelligence AND keyword/search demand are both needed together (the agent runs both `market-research` and `keyword-research` skills in a single pass)
-- The user needs to understand a market, vertical, or topic before building a campaign or content strategy
-- Positioning work, go-to-market planning, or new segment entry requires structured intelligence
-- Phrases like: "what's the landscape for X", "who are we competing against in Y", "research this market before we start", "what are buyers searching for around Z"
+Runs `market-research` and `keyword-research` together in a single pass — delegate only when both competitive intelligence and search demand are needed.
 
 **Don't delegate when:**
 - Only keyword research is needed for a specific topic — invoke `keyword-research` skill directly
@@ -163,12 +148,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 ---
 
 ### `content-creator` (green)
-
-**Delegate when:**
-- Multiple content formats are needed for a single campaign or topic (e.g. blog + social + landing page)
-- The brief is open enough that format selection, sequencing, and brand judgment are required
-- The user gives a campaign theme or objective and asks for "content" without specifying exactly what
-- Phrases like: "I need content for this launch", "create a content package around X", "we need to support this campaign with content"
 
 **Don't delegate when:**
 - The user requests a single, specific content format with a clear brief:
@@ -183,12 +162,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `creative-designer` (yellow)
 
-**Delegate when:**
-- Visual direction needs to be defined from a brief — the agent interprets the campaign objective, selects styles, and specifies creatives across platforms
-- Multiple platforms or formats are in scope and need consistent visual treatment
-- Ad creatives require both copy direction and visual spec together
-- Phrases like: "what should this campaign look like", "create social graphics for the launch", "I need ad creatives across LinkedIn and display"
-
 **Don't delegate when:**
 - A specific graphic is requested with a clear topic, style, and platform already specified — invoke `social-creative-designer` skill directly
 - The user only needs ad copy text (no visual spec) — invoke `ad-creative` skill directly
@@ -199,11 +172,7 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `data-analyst` (orange)
 
-**Delegate when:**
-- Raw or multi-source campaign data needs to be turned into insights, not just formatted into a table
-- The analysis goal is open-ended: "make sense of this", "what's driving the drop", "how did Q1 perform"
-- Both performance analysis AND visual reporting are needed together (the agent applies `campaign-report` + `data-visualization` skills in sequence)
-- Anomaly investigation, cross-channel comparisons, or executive-level performance narratives are required
+Applies `campaign-report` + `data-visualization` in sequence — delegate when analysis judgment and visual reporting are needed together.
 
 **Don't delegate when:**
 - The user wants a specific chart from specific data they've already interpreted — invoke `data-visualization` skill directly
@@ -213,12 +182,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `seo-specialist` (blue)
 
-**Delegate when:**
-- The task involves auditing website technical SEO health, Core Web Vitals, robots.txt crawl rules, XML sitemaps, URL hierarchy, page speed, or mobile optimization.
-- You need to perform page-specific metadata and HTML on-page optimization, checks for keyword density, or structured data (schema) recommendations.
-- Identifying keyword cannibalization and mapping topic cluster ownership is required.
-- Phrases like: "run a technical SEO audit", "optimize this URL for Google", "fix our crawl blocks", "do an on-page audit on our services page".
-
 **Don't delegate when:**
 - Only keyword research or search demand clustering is needed (use `keyword-research` skill directly).
 - General competitor messaging audits or market landscapes are in scope (use `market-researcher` agent).
@@ -227,22 +190,12 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `ai-citation-strategist` (purple)
 
-**Delegate when:**
-- The goal is to audit or optimize the brand's visibility, mention context, or share of voice across ChatGPT, Claude, Gemini, and Perplexity.
-- You need to run lost prompt analysis, identify why competitors are recommended instead of your brand, or generate structural fix packs for content and entities (Wikidata, Organization schema).
-- Phrases like: "audit our AI citation rate", "why is ChatGPT recommending our competitor", "make our site visible to Perplexity", "fix our GEO optimization".
-
 **Don't delegate when:**
 - Traditional search optimization, crawl blocks, XML sitemaps, or Core Web Vitals are the primary focus (use `seo-specialist` agent).
 
 ---
 
 ### `pr-comms` (blue)
-
-**Delegate when:**
-- You need to draft an AP-style press release for a wire announcement, compile a journalist media pitch, plan a crisis communication playbook with holding statements, or ghostwrite CEO thought leadership.
-- Managing earned media, brand reputation, or spokesperson positioning is required.
-- Phrases like: "write a press release about X", "pitch a reporter on Y", "we need a crisis response statement", "draft a CEO opinion piece for LinkedIn".
 
 **Don't delegate when:**
 - Writing customer-facing marketing blogs, social media posts, or landing pages (use `content-creator` agent).
@@ -251,13 +204,7 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `social-strategist` (blue)
 
-**The social routing rule:** a single bounded deliverable (one post, one set of variants for one post, one graphic) routes directly to the executor skill (`social-copy` / `social-creative-designer`). A multi-piece or planned request (calendar, campaign, cross-platform program) routes to `social-strategist`, which sequences the program and invokes the executor skills per piece as part of orchestration.
-
-**Delegate when:**
-- Designing platform-specific growth plays, community engagement strategy, or a multi-platform content calendar.
-- Developing social media policies, guidelines, or channel prioritization grids.
-- A request spans multiple social pieces that need cadence, sequencing, or program structure (e.g. a two-week launch push combining posts and carousels).
-- Phrases like: "plan our social media content calendar", "what's our LinkedIn strategy this month", "design our social growth playbook".
+**The social routing rule:** a single bounded deliverable (one post, one set of variants for one post, one graphic) routes directly to the executor skill (`social-copy` / `social-creative-designer`). A multi-piece or planned request (calendar, campaign, cross-platform program, policies/guidelines) routes to `social-strategist`, which sequences the program and invokes the executor skills per piece as part of orchestration.
 
 **Don't delegate when:**
 - The request is one bounded social deliverable, even if it produces A/B variants:
@@ -268,21 +215,12 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `podcast-strategist` (purple)
 
-**Delegate when:**
-- Mapping show positioning, guest research templates, episode talking points, scripts, show notes, or repurposing plans.
-- Phrases like: "plan our next podcast episode", "draft show notes for episode X", "outline a script for our guest panel".
-
 **Don't delegate when:**
 - Writing a standard B2B marketing blog post from general topic outlines (use `content-creator` agent).
 
 ---
 
 ### `lead-generation-engine` (indigo)
-
-**Delegate when:**
-- A lead generation funnel needs to be architected from scratch — channel mix, MQL/SQL qualification criteria, scoring model, and nurture flow map.
-- Existing lead flow has a qualification problem ("we're getting leads but they're junk") that needs a scoring/criteria fix, not just more top-of-funnel content.
-- Phrases like: "design our lead gen funnel for X", "what's our MQL/SQL criteria", "build a lead scoring model", "map our nurture flow".
 
 **Don't delegate when:**
 - The user wants a single gated asset, landing page, or nurture email and a funnel/qualification model already exists for it — route to `content-creator` (`lead-magnet`, `lp-builder`, `email-copy`) directly.
@@ -291,11 +229,6 @@ If the user says "we're launching X and need a content push" — delegate to `co
 ---
 
 ### `webinar-strategist` (crimson)
-
-**Delegate when:**
-- Planning a webinar end-to-end — concept, agenda, speaker brief, promotion timeline, registration brief, and follow-up sequence outline.
-- Structuring post-webinar follow-up (attendee and no-show tracks) even when the event has already happened.
-- Phrases like: "plan a webinar on X", "build our webinar run-of-show", "design the registration-to-follow-up flow for this webinar".
 
 **Don't delegate when:**
 - The user wants promotional copy, a registration page, or a follow-up email and a webinar plan already exists — route to `content-creator` (`social-copy`, `lp-builder`, `email-copy`) directly.
