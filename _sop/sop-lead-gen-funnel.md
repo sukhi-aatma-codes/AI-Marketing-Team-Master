@@ -27,6 +27,7 @@ This SOP governs building a lead generation funnel from architecture through exe
 - [ ] **3.1 Hand off with the funnel doc as the brief:** `lead-generation-engine` does not write assets. Pass `output\reports\lead-gen-strategy-<topic>-<date>.md` to `content-creator`.
 - [ ] **3.2 Build in dependency order:** `lead-magnet` (gated asset: `.md` + branded PDF) → `lp-builder` (gate/landing page: `.md` + `.html` in `output\pages\`) → `email-copy` (nurture sequence: `.md` + `.docx` in `output\email\`). Each asset must reference the funnel stage and qualification triggers defined in Phase 2.
 - [ ] **3.3 Output verification:** Confirm each skill's full output contract exists before reporting the phase complete.
+- [ ] **3.4 Campaign manifest (conditional):** If this funnel belongs to a named campaign, append one row per asset (funnel doc included) to `output\campaigns\<campaign-slug>.md` and use the campaign slug as the `<topic>` segment of asset filenames.
 
 ### Phase 4: Amplification (conditional)
 *Owner: `creative-designer`*

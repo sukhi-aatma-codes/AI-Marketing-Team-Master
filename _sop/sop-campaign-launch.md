@@ -22,6 +22,7 @@ This SOP governs the end-to-end execution of designing, drafting, and preparing 
 - [ ] **2.2 Formulate Positioning:** Define the campaign's hero positioning statement and messaging pillars.
 - [ ] **2.3 Structure Channels:** List required deliverables across organic, paid, and search channels.
 - [ ] **2.4 Handover:** Save the master Campaign Strategy Document in `output\reports\` and brief the execution team.
+- [ ] **2.5 Campaign Manifest:** Create `output\campaigns\<campaign-slug>.md` seeded with the planned deliverables (per the campaign-strategist manifest format). All downstream asset filenames use the campaign slug as their `<topic>` segment.
 
 ### Phase 3: Copywriting & Design Production
 *Owners: `content-creator` (Copy), `creative-designer` (Visuals)*
@@ -29,6 +30,7 @@ This SOP governs the end-to-end execution of designing, drafting, and preparing 
 - [ ] **3.2 Copy Compliance:** Ensure all copy strictly follows rules in `Brand_Voice_Guide.md`.
 - [ ] **3.3 Design Specs:** Create platform-compliant specs (dimensions, color hex codes from `Brand_Style.md`, typography, logo rules).
 - [ ] **3.4 Review & Save:** Save creative briefs and ad copy to `output\ads\` or `output\social\` as appropriate.
+- [ ] **3.5 Manifest Update:** For each saved asset, append its row to `output\campaigns\<campaign-slug>.md` (or flip its seeded row to `done`).
 
 ### Phase 4: Analytics Scaffolding
 *Owner: `data-analyst`*

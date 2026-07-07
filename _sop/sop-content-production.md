@@ -40,4 +40,5 @@ This SOP governs the production of multi-format content packages (e.g. blog + so
 *Owner: `content-creator`*
 - [ ] **5.1 Output verification:** Confirm every skill produced its full output contract (e.g. `blog-writer` → `.md` + `.html` + `.docx` in `output\pages\`; `social-copy` → `.md` + `.docx` in `output\social\`; `email-copy` → `.md` + `.docx` in `output\email\`). Missing files mean the skill did not complete — do not report done.
 - [ ] **5.2 Summary table:** Deliver a table listing each asset, format, channel, file path, and CTA.
-- [ ] **5.3 Ledger update (conditional):** Write to `Brand_Insights_Ledger.md` Section 3 only if the user confirmed or corrected something new this run — never routine completions.
+- [ ] **5.3 Campaign manifest (conditional):** If the package belongs to a named campaign, append one row per asset to `output\campaigns\<campaign-slug>.md` (or flip seeded rows to `done`), and use the campaign slug as the `<topic>` segment of every filename.
+- [ ] **5.4 Ledger update (conditional):** Write to `Brand_Insights_Ledger.md` Section 3 only if the user confirmed or corrected something new this run — never routine completions.

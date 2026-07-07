@@ -28,6 +28,7 @@ d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\
     ├── output\email\          ← email copy, welcome and nurture sequences
     ├── output\podcasts\       ← podcast episode briefs, outline scripts, show notes
     ├── output\webinars\       ← webinar plans, agendas, speaker briefs, promotion timelines, follow-up outlines
+    ├── output\campaigns\      ← one manifest per campaign: the asset index that reconnects deliverables scattered across the type folders
     └── output\ideogram_output\ ← intermediate: raw Ideogram-generated images (working files only — finals go to output\social\)
 ```
 
@@ -72,6 +73,15 @@ Save finished outputs to the folder that matches the deliverable type:
 | ABM account plans, lead generation funnel strategy | `output\reports\` |
 
 Use clear filenames: `<type>-<topic>-<yyyy-mm-dd>.md` (or `.pptx`, `.pdf` as appropriate). Use the template in `_templates\` when producing enterprise decks.
+
+### Campaign manifests
+
+Deliverables are filed by type, so one campaign's assets scatter across `ads\`, `pages\`, `social\`, `email\`. The manifest is the index that reconnects them:
+
+- When a campaign strategy is produced, `campaign-strategist` creates `output\campaigns\<campaign-slug>.md` (format defined in that agent), seeded with the planned deliverables.
+- The campaign slug is kebab-case and becomes the `<topic>` segment of every asset filename in that campaign (`<type>-<campaign-slug>-<yyyy-mm-dd>.<ext>`), so assets stay greppable even without the manifest.
+- Any agent or skill that saves an asset belonging to a named campaign appends one row to that campaign's manifest (date, asset, type, path, produced by, status) — or flips the seeded row's status to `done`. If the manifest doesn't exist but the work clearly belongs to a named campaign, create it.
+- One-off deliverables with no campaign get no manifest — nothing changes for them.
 
 ## Global rules
 

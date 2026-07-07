@@ -110,9 +110,26 @@ This section feeds directly into the `campaign-brief` and `branded-deck` skills.
    - **Social Media Strategy & Editorial Calendar:** Hand off to `social-strategist`.
    - **Podcasting & Guest Scripting:** Hand off to `podcast-strategist`.
    - **Content & Landing Pages:** Hand off to `content-creator`.
-7. **Save the output.** Save the completed strategy document to `output\reports\` using the filename convention: `strategy-<campaign-name>-<yyyy-mm-dd>.md`.
+7. **Save the output.** Choose a kebab-case campaign slug (short, stable — it becomes the `<topic>` segment of every asset filename in this campaign). Save the completed strategy document to `output\reports\` using the filename convention: `strategy-<campaign-slug>-<yyyy-mm-dd>.md`.
 
-8. **Update the Brand Insights Ledger.** Write new intelligence to `_context/Brand_Insights_Ledger.md` — **Section 1: Core Buyer Personas & Objections** — only when you've discovered something not already captured there:
+8. **Create the campaign manifest.** Save `output\campaigns\<campaign-slug>.md` — the index that reconnects the campaign's assets after they scatter across the type-based output folders. Seed the asset table with every deliverable from Section 7 (Deliverable Specifications), status `planned`:
+
+   ```markdown
+   # Campaign Manifest: <Campaign Name>
+
+   **Slug:** `<campaign-slug>`
+   **Status:** planning | in-production | live | complete
+   **Strategy doc:** output/reports/strategy-<campaign-slug>-<yyyy-mm-dd>.md
+   **Window:** <start> → <end>
+
+   | Date | Asset | Type | Path | Produced by | Status |
+   |------|-------|------|------|-------------|--------|
+   | <yyyy-mm-dd> | <asset name> | <blog / ad / social / email / page / deck> | <planned output path> | <agent or skill> | planned |
+   ```
+
+   Downstream agents and skills append one row per produced asset (or flip a seeded row's status to `done`) — see the Campaign manifests convention in CLAUDE.md.
+
+9. **Update the Brand Insights Ledger.** Write new intelligence to `_context/Brand_Insights_Ledger.md` — **Section 1: Core Buyer Personas & Objections** — only when you've discovered something not already captured there:
    - ICP nuances or objections surfaced during strategy work
    - Positioning angles that fit this brand unusually well
    - Assumptions the user confirmed or corrected

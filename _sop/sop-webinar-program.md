@@ -37,4 +37,5 @@ This SOP governs running a webinar program end-to-end: plan, registration assets
 *Owners: `content-creator` (email), `webinar-strategist` (wrap)*
 - [ ] **5.1 Execute both tracks:** Invoke `email-copy` for the attendee track (recording + next-step CTA) and the no-show track (recording + re-engagement) as defined in the plan → `output\email\`.
 - [ ] **5.2 Repurposing handoff (conditional):** If the recording feeds other content (blog recap, social clips), hand off to `content-creator` / `social-strategist` with the plan and recording as inputs.
-- [ ] **5.3 Ledger update (conditional):** Write to `Brand_Insights_Ledger.md` Section 11 only with validated results — registration/attendance patterns, follow-up conversion differences, speaker formats that resonated. Not at planning time.
+- [ ] **5.3 Campaign manifest (conditional):** If the webinar belongs to a named campaign, append one row per asset (plan, registration page, promo pieces, follow-up sequences) to `output\campaigns\<campaign-slug>.md` and use the campaign slug as the `<topic>` segment of asset filenames.
+- [ ] **5.4 Ledger update (conditional):** Write to `Brand_Insights_Ledger.md` Section 11 only with validated results — registration/attendance patterns, follow-up conversion differences, speaker formats that resonated. Not at planning time.
