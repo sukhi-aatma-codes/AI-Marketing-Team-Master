@@ -3,7 +3,9 @@
 **Last Updated:** 2026-05-25  
 **Access Rule:** Read-Write for all sub-agents (`brand-onboarder`, `campaign-strategist`, `market-researcher`, `content-creator`, `creative-designer`, `data-analyst`, `seo-specialist`, `ai-citation-strategist`, `pr-comms`, `social-strategist`, `podcast-strategist`, `lead-generation-engine`, `webinar-strategist`).
 
-This shared ledger holds compounding strategic observations, user feedback, and campaign performance insights discovered by individual sub-agents across sessions. All agents **must** load this ledger in addition to standard context files to leverage collective agent intelligence.
+This shared ledger holds compounding strategic observations, user feedback, and campaign performance insights discovered by individual sub-agents across sessions. Each agent reads the sections named in its pre-flight checklist (Section 1 plus its own function's section) rather than the whole file.
+
+**Scope rule — ledger vs. agent memory:** this ledger holds intelligence about the **active brand only** (personas, voice preferences, performance patterns, competitors, contacts); it is wiped on every brand switch. Brand-agnostic craft and collaboration learnings (how the user works, tool techniques, report formats) belong in each agent's private memory, not here. Never write the same insight to both.
 
 ---
 

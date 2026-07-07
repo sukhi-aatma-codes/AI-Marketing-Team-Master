@@ -5,7 +5,7 @@ This is the user's personal, portable marketing operating system — built to fu
 ## Workspace layout
 
 ```
-d:\AI Marketing Team Master\
+d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\
 ├── _context\           ← brand foundation (voice, style, product, growth context)
 ├── _sop\               ← standard operating procedures per workflow
 ├── _samples\           ← raw brand input drop zone: decks, style guides, images, ad archives.
@@ -16,7 +16,7 @@ d:\AI Marketing Team Master\
 ├── _templates\         ← active brand's reusable .pptx deck template + analysis, built by
 │                          `build-brand-deck-template` — never manually placed, never another
 │                          brand's leftover file
-├── skills\             ← project-local Claude skills (brand-agnostic)
+├── .claude\skills\     ← project-local Claude skills (brand-agnostic), registered with the Skill tool
 └── output\             ← streamlined output directory
     ├── output\ads\            ← ad copy, creative briefs, paid campaign assets
     ├── output\pages\          ← landing pages, web copy
@@ -39,8 +39,18 @@ d:\AI Marketing Team Master\
 - [Brand_Product_Offerings.md](_context/Brand_Product_Offerings.md) — services, ICPs
 - [Brand_Growth_Marketing_Context.md](_context/Brand_Growth_Marketing_Context.md) — funnel, channels, goals
 - [Brand_Style_Reference.md](_context/Brand_Style_Reference.md) — generative visual style library (named styles + Flux/Ideogram prompt starters), built by `build-brand-style-reference` when creative samples exist
+- [Brand_Insights_Ledger.md](_context/Brand_Insights_Ledger.md) — shared cross-agent brand intelligence: validated personas, objections, voice preferences, performance patterns, one section per sub-function. The one `_context\` file agents routinely write to (append-only, dated entries). Reset by `brand-onboarder` on every brand switch.
 
 Do not auto-load all context files at session start. Read the ones directly relevant to the current task — e.g. load `Brand_Voice_Guide.md` for any copywriting, `Brand_Product_Offerings.md` when the task involves a specific service line.
+
+### Two memory systems — which learning goes where
+
+Agents have two persistence mechanisms. The test: **would this still be true if the active brand changed tomorrow?**
+
+- **No → Brand Insights Ledger** (`_context/Brand_Insights_Ledger.md`). Everything about the active brand: persona insights, validated objections, voice and tone preferences the user confirmed, performance benchmarks, competitor patterns, media contacts, posting-time findings. Shared by all agents so intelligence compounds across the team; wiped on brand switch.
+- **Yes → agent memory** (`.claude\agent-memory\<agent>\`, auto-managed by the harness). Brand-agnostic craft and collaboration learnings only: how the user likes to work, workflow and tool techniques that worked, report formats that landed, recurring brief ambiguities worth preempting. Never store brand facts here — agent memory is NOT reset by onboarding, so brand facts stored in it go silently stale after a brand switch.
+
+Never write the same insight to both places.
 
 ## Output routing
 
@@ -167,6 +177,7 @@ If the user says "we're launching X and need a content push" — delegate to `co
   - "Build a landing page for Z" → invoke `lp-builder` directly
   - "Create a lead magnet on W" → invoke `lead-magnet` directly
   - "Edit/review/refresh this existing copy" → invoke `copy-editing` directly — this is reviewing copy that already exists, not producing something new
+- The request is a social-only multi-piece program (calendar, cadence, cross-platform social push) — that belongs to `social-strategist`, which orchestrates `social-copy`/`social-creative-designer` per piece. `content-creator` owns multi-format packages that span beyond social (blog + social + landing page).
 
 ---
 
@@ -182,6 +193,7 @@ If the user says "we're launching X and need a content push" — delegate to `co
 - A specific graphic is requested with a clear topic, style, and platform already specified — invoke `social-creative-designer` skill directly
 - The user only needs ad copy text (no visual spec) — invoke `ad-creative` skill directly
 - The request is a general-purpose image (blog hero, OG image, banner, mockup) outside the ad/social-carousel formats — invoke `image` skill directly
+- The request is a scheduled social program (calendar, cadence) rather than a creative set — that's `social-strategist`'s, which invokes the design skills per piece
 
 ---
 
@@ -239,14 +251,18 @@ If the user says "we're launching X and need a content push" — delegate to `co
 
 ### `social-strategist` (blue)
 
+**The social routing rule:** a single bounded deliverable (one post, one set of variants for one post, one graphic) routes directly to the executor skill (`social-copy` / `social-creative-designer`). A multi-piece or planned request (calendar, campaign, cross-platform program) routes to `social-strategist`, which sequences the program and invokes the executor skills per piece as part of orchestration.
+
 **Delegate when:**
 - Designing platform-specific growth plays, community engagement strategy, or a multi-platform content calendar.
 - Developing social media policies, guidelines, or channel prioritization grids.
+- A request spans multiple social pieces that need cadence, sequencing, or program structure (e.g. a two-week launch push combining posts and carousels).
 - Phrases like: "plan our social media content calendar", "what's our LinkedIn strategy this month", "design our social growth playbook".
 
 **Don't delegate when:**
-- Writing copy for a specific social post variant (use `social-copy` skill directly).
-- Designing a visual layout specification (use `social-creative-designer` skill directly).
+- The request is one bounded social deliverable, even if it produces A/B variants:
+  - One post or post variants → `social-copy` skill directly.
+  - One graphic or carousel with topic, style, and platform known → `social-creative-designer` skill directly.
 
 ---
 
@@ -303,7 +319,7 @@ These are the natural multi-agent sequences for common marketing workflows. Each
 | AI visibility push | `seo-specialist` (aeo-foundations) → `ai-citation-strategist` |
 | PR campaign | `pr-comms` → `content-creator` + `social-strategist` (amplification) |
 | Podcast launch | `podcast-strategist` → `content-creator` (repurpose) + `social-strategist` (promote) |
-| Social media program | `social-strategist` → `content-creator` + `creative-designer` |
+| Social media program | `social-strategist` → invokes `social-copy` + `social-creative-designer` skills per piece |
 | Email-driven campaign | `campaign-strategist` → `content-creator` (landing page) + `email-copy` (sequence) |
 | ABM campaign | `campaign-strategist` (incl. `abm-account-plan`) → `creative-designer` + `content-creator` (personalized assets) |
 | Lead gen funnel build | `lead-generation-engine` → `content-creator` (lead magnet + landing page + nurture sequence) |
@@ -313,7 +329,7 @@ These are the natural multi-agent sequences for common marketing workflows. Each
 
 ## Workspace Conventions
 
-**Current workspace version:** Master — `d:\AI Marketing Team Master\`
+**Current workspace version:** Master — `d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\`
 
 This workspace is versioned and managed using Git. Hardcoded absolute paths break on copy/clone. The following conventions ensure portability.
 
@@ -325,18 +341,18 @@ All agents store persistent memory under `.claude\agent-memory\<agent-name>\` wi
 (Resolve-Path '.claude\agent-memory\<agent-name>').Path
 ```
 
-**Never hardcode an absolute path** (e.g. `D:\AI Marketing Team Master\...`) into an agent or skill file. If the workspace is copied or cloned, hardcoded paths will silently write to the wrong folder.
+**Never hardcode an absolute path** (e.g. `D:\Marketing-Team-Agentic-AI\AI Marketing Team Master\...`) into an agent or skill file. If the workspace is copied or cloned, hardcoded paths will silently write to the wrong folder.
 
 ### Relative path rule — configs and outputs
 
 Non-agent references (MCP server configs, skill output paths) use paths relative to the workspace root:
-- Ideogram output: `output/ideogram_output` (not `D:\AI Marketing Team Master\ideogram_output`)
+- Ideogram output: `output/ideogram_output` (not an absolute path under the workspace root)
 - Skill outputs: `output\pages\`, `output\social\`, `output\reports\`, etc. (relative, not absolute)
 
 ### What to do when versioning this workspace
 
 When copying or cloning this workspace to a new version:
-1. Update the path version label in this section (`d:\AI Marketing Team Master\`)
+1. Update the path version label in this section (currently `d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\`)
 2. Update `PROJECT_OVERVIEW.md` title
 3. Update the workspace layout diagram path above
 4. All agent memory paths and MCP configs are already portable — no further changes needed

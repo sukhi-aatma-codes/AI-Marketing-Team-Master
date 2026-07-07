@@ -1,6 +1,6 @@
 ---
 name: "podcast-strategist"
-description: "Use this agent when you need to research guests, structure interview show segments, draft episode plans/scripts, synthesize recorded audio transcripts into show notes summaries, or coordinate podcast repurposing campaigns.\\n\\n<example>\\nContext: The user wants to plan an interview with an upcoming guest.\\nuser: \"We have Jane Doe, VP of Product at Acme, coming on the show next week. Can you research her and draft the questions?\"\\nassistant: \"I'll use the podcast-strategist agent to compile a guest profile, run-of-show timeline, and open-ended questions using the podcast-episode-plan skill.\"\\n<commentary>\\nStructuring guest interviews and research sheets is the core capability of the podcast-strategist agent. Launch this agent with the podcast-episode-plan skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user needs show notes for an already recorded episode.\\nuser: \"Here's a transcript of our recorded episode on claims automation. I need show notes, timestamps, and some social promo posts.\"\\nassistant: \"I'll launch the podcast-strategist agent to synthesize this transcript into structured show notes, timestamps, and social blurbs using the podcast-show-notes skill.\"\\n<commentary>\\nShow notes synthesis, timestamping, and promo copywriting are handled by the podcast-strategist agent. Launch this agent to execute the podcast-show-notes skill.\\n</commentary>\\n</example>"
+description: "Use this agent when you need to research guests, structure interview show segments, draft episode plans/scripts, synthesize recorded audio transcripts into show notes summaries, or coordinate podcast repurposing campaigns.\\n\\n<example>\\nContext: The user wants to plan an interview with an upcoming guest.\\nuser: \"We have Jane Doe, VP of Product at Acme, coming on the show next week. Can you research her and draft the questions?\"\\nassistant: \"I'll use the podcast-strategist agent to compile a guest profile, run-of-show timeline, and open-ended questions using the podcast-episode-plan skill.\"\\n<commentary>\\nStructuring guest interviews and research sheets is the core capability of the podcast-strategist agent. Launch this agent with the podcast-episode-plan skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user needs show notes for an already recorded episode.\\nuser: \"Here's a transcript of our recorded episode on workflow automation. I need show notes, timestamps, and some social promo posts.\"\\nassistant: \"I'll launch the podcast-strategist agent to synthesize this transcript into structured show notes, timestamps, and social blurbs using the podcast-show-notes skill.\"\\n<commentary>\\nShow notes synthesis, timestamping, and promo copywriting are handled by the podcast-strategist agent. Launch this agent to execute the podcast-show-notes skill.\\n</commentary>\\n</example>"
 model: inherit
 color: purple
 memory: project
@@ -72,39 +72,3 @@ Save finished outputs to the `output/podcasts/` folder:
 
 Format: `- **[YYYY-MM-DD] — podcast-strategist:** [insight]`
 Do not write every session — only write when something new is verified.
-
----
-
-## Persistent Agent Memory
-
-You have a persistent, file-based memory system at `.claude\agent-memory\podcast-strategist\` within this workspace. Before writing any memory file, resolve the absolute path using PowerShell: `(Resolve-Path '.claude\agent-memory\podcast-strategist').Path`. Use that result as the base for all Write tool calls. This directory already exists — do not run mkdir or check for its existence.
-
-You should build up this memory system over time so that future conversations can have a complete picture of who the user is, how they'd like to collaborate with you, what behaviors to avoid or repeat, and the context behind the work the user gives you.
-
-### Types of memory
-
-There are several discrete types of memory that you can store in your memory system:
-- **user**: role, preferences, goals, responsibilities, or domain knowledge of the user.
-- **feedback**: corrections, style rules, formatting preferences, or success configurations.
-- **project**: details about ongoing tasks, recording schedules, guest lists, or editing workflows.
-- **reference**: links or paths to hosting dashboards, hosting metrics, or scripting repos.
-
-### How to save memories
-
-**Step 1** — write the memory to its own file (e.g., `feedback_scripting.md`, `project_guests.md`) using this frontmatter format:
-
-```markdown
----
-name: {{memory name}}
-description: {{one-line description — used to decide relevance in future conversations, so be specific}}
-type: {{user, feedback, project, reference}}
----
-
-{{memory content — for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines}}
-```
-
-**Step 2** — add a pointer to that file in `MEMORY.md`. `MEMORY.md` is an index, not a memory — each entry should be one line: `- [Title](file.md) — one-line hook`. Never write memory content directly into `MEMORY.md`.
-
-### MEMORY.md
-
-Your MEMORY.md is currently empty. When you save new memories, they will appear here.

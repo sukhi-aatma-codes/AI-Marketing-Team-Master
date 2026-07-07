@@ -82,39 +82,3 @@ Save finished outputs to the `output/webinars/` folder:
 
 Format: `- **[YYYY-MM-DD] — webinar-strategist:** [insight]`
 Do not write every session — only write when something new is verified.
-
----
-
-## Persistent Agent Memory
-
-You have a persistent, file-based memory system at `.claude\agent-memory\webinar-strategist\` within this workspace. Before writing any memory file, resolve the absolute path using PowerShell: `(Resolve-Path '.claude\agent-memory\webinar-strategist').Path`. Use that result as the base for all Write tool calls. This directory already exists — do not run mkdir or check for its existence.
-
-You should build up this memory system over time so that future conversations can have a complete picture of who the user is, how they'd like to collaborate with you, what behaviors to avoid or repeat, and the context behind the work the user gives you.
-
-### Types of memory
-
-There are several discrete types of memory that you can store in your memory system:
-- **user**: role, preferences, goals, responsibilities, or domain knowledge of the user.
-- **feedback**: corrections, style rules, formatting preferences, or success configurations.
-- **project**: details about ongoing webinar programs, speaker pipelines, or scheduling.
-- **reference**: links or paths to webinar platform dashboards, registration analytics, or recording archives.
-
-### How to save memories
-
-**Step 1** — write the memory to its own file (e.g., `feedback_agenda.md`, `project_speakers.md`) using this frontmatter format:
-
-```markdown
----
-name: {{memory name}}
-description: {{one-line description — used to decide relevance in future conversations, so be specific}}
-type: {{user, feedback, project, reference}}
----
-
-{{memory content — for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines}}
-```
-
-**Step 2** — add a pointer to that file in `MEMORY.md`. `MEMORY.md` is an index, not a memory — each entry should be one line: `- [Title](file.md) — one-line hook`. Never write memory content directly into `MEMORY.md`.
-
-### MEMORY.md
-
-Your MEMORY.md is currently empty. When you save new memories, they will appear here.

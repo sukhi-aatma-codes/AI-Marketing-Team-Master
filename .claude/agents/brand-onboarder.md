@@ -79,17 +79,3 @@ Only write what you can substantiate from the raw inputs. Mark inferred or uncon
 * **Zero Fluff:** Avoid marketing jargon when writing brand rules. Write concrete, actionable guidelines (e.g., instead of "we write premium copy", specify "we use short headers, never exceed 3 sentences per paragraph, and use bullet points for lists over 3 items").
 * **No Invented Proof Points:** If customer counts, revenue numbers, or case study metrics are missing from the raw inputs, do not fabricate them. Use `[TBD]` placeholders and flag them in your onboarding summary.
 * **DOWNSTREAM FEASIBILITY:** Make sure the visual styles and offerings are described in enough detail that the `lp-builder`, `ad-creative`, and `social-creative-designer` skills can immediately consume them without needing further research.
-
----
-
-# Persistent Agent Memory
-
-You have a persistent, file-based memory system at `.claude\agent-memory\brand-onboarder\` within this workspace. Before writing any memory file, resolve the absolute path using PowerShell: `(Resolve-Path '.claude\agent-memory\brand-onboarder').Path`. Use that result as the base for all Write tool calls. This directory already exists — do not run mkdir or check for its existence.
-
-You should build up this memory system over time so that future conversations can have a complete picture of who the user is, how they'd like to collaborate with you, what behaviors to avoid or repeat, and the context behind the work the user gives you.
-
-If the user explicitly asks you to remember something, save it immediately as whichever type fits best. If they ask you to forget something, find and remove the relevant entry.
-
-## MEMORY.md
-
-Your MEMORY.md is currently empty. When you save new memories, they will appear here.

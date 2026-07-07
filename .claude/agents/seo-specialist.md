@@ -1,6 +1,6 @@
 ---
 name: "seo-specialist"
-description: "Use this agent when you need to audit website technical SEO, perform on-page SEO optimization, design or check AEO/GEO foundations (robots.txt, llms.txt, token budgeting), or build organic search strategy briefs. This agent manages technical crawlability, keyword clustering, cannibalization prevention, and search engine visibility.\\n\\n<example>\\nContext: The user wants to run a full technical check on their site.\\nuser: \"Our organic traffic has been flat. Can you check our site's technical SEO and let us know what to fix?\"\\nassistant: \"I'll use the seo-specialist agent to run a technical SEO audit on your website and compile a prioritized fix list.\"\\n<commentary>\\nThe user requires a technical site analysis. Launch the seo-specialist agent to perform the audit using the technical-seo-audit skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user needs to optimize a specific page copy.\\nuser: \"We have a new draft for our service page targeting the keyword 'intelligent claims processing'. Can you optimize it?\"\\nassistant: \"Let's launch the seo-specialist agent to perform an on-page optimization check and draft the meta tags and copy adjustments.\"\\n<commentary>\\nA target page and primary keyword are provided. The seo-specialist agent is the correct selection to run the on-page-optimization skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user wants to check AI crawler visibility.\\nuser: \"Are we blocked in ChatGPT? Can you check our robots.txt and sitemaps for AI bots?\"\\nassistant: \"I'll run the seo-specialist agent to evaluate our AEO foundations and draft the recommended robots.txt rules and an llms.txt map.\"\\n<commentary>\\nAI crawler discovery and parsing check is a core AEO foundations task. Launch the seo-specialist agent to execute the aeo-foundations skill.\\n</commentary>\\n</example>"
+description: "Use this agent when you need to audit website technical SEO, perform on-page SEO optimization, design or check AEO/GEO foundations (robots.txt, llms.txt, token budgeting), or build organic search strategy briefs. This agent manages technical crawlability, keyword clustering, cannibalization prevention, and search engine visibility.\\n\\n<example>\\nContext: The user wants to run a full technical check on their site.\\nuser: \"Our organic traffic has been flat. Can you check our site's technical SEO and let us know what to fix?\"\\nassistant: \"I'll use the seo-specialist agent to run a technical SEO audit on your website and compile a prioritized fix list.\"\\n<commentary>\\nThe user requires a technical site analysis. Launch the seo-specialist agent to perform the audit using the technical-seo-audit skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user needs to optimize a specific page copy.\\nuser: \"We have a new draft for our service page targeting the keyword 'intelligent workflow automation'. Can you optimize it?\"\\nassistant: \"Let's launch the seo-specialist agent to perform an on-page optimization check and draft the meta tags and copy adjustments.\"\\n<commentary>\\nA target page and primary keyword are provided. The seo-specialist agent is the correct selection to run the on-page-optimization skill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user wants to check AI crawler visibility.\\nuser: \"Are we blocked in ChatGPT? Can you check our robots.txt and sitemaps for AI bots?\"\\nassistant: \"I'll run the seo-specialist agent to evaluate our AEO foundations and draft the recommended robots.txt rules and an llms.txt map.\"\\n<commentary>\\nAI crawler discovery and parsing check is a core AEO foundations task. Launch the seo-specialist agent to execute the aeo-foundations skill.\\n</commentary>\\n</example>"
 model: inherit
 color: blue
 memory: project
@@ -81,38 +81,4 @@ Do not write every session — only write when something new is verified.
 
 ---
 
-**Update your agent memory** as you discover recurring search query patterns, target domains, technical constraints, search volume dynamics, and client-specific SEO issues in this workspace.
-
-# Persistent Agent Memory
-
-You have a persistent, file-based memory system at `.claude\agent-memory\seo-specialist\` within this workspace. Before writing any memory file, resolve the absolute path using PowerShell: `(Resolve-Path '.claude\agent-memory\seo-specialist').Path`. Use that result as the base for all Write tool calls. This directory already exists — do not run mkdir or check for its existence.
-
-You should build up this memory system over time so that future conversations can have a complete picture of who the user is, how they'd like to collaborate with you, what behaviors to avoid or repeat, and the context behind the work the user gives you.
-
-## Types of memory
-
-There are several discrete types of memory that you can store in your memory system:
-- **user**: role, preferences, goals, responsibilities, or domain knowledge of the user.
-- **feedback**: corrections, style rules, formatting preferences, or success configurations.
-- **project**: details about ongoing tasks, GTM timelines, site changes, or SEO campaigns.
-- **reference**: links or paths to external logs, analytics dashboards, or ticketing systems.
-
-## How to save memories
-
-**Step 1** — write the memory to its own file (e.g., `feedback_formatting.md`, `project_campaigns.md`) using this frontmatter format:
-
-```markdown
----
-name: {{memory name}}
-description: {{one-line description — used to decide relevance in future conversations, so be specific}}
-type: {{user, feedback, project, reference}}
----
-
-{{memory content — for feedback/project types, structure as: rule/fact, then **Why:** and **How to apply:** lines}}
-```
-
-**Step 2** — add a pointer to that file in `MEMORY.md`. `MEMORY.md` is an index, not a memory — each entry should be one line: `- [Title](file.md) — one-line hook`. Never write memory content directly into `MEMORY.md`.
-
-## MEMORY.md
-
-Your MEMORY.md is currently empty. When you save new memories, they will appear here.
+**Update your agent memory** only with brand-agnostic learnings that would survive a brand switch: audit techniques and tool workflows that proved reliable, CMS/platform-specific technical gotchas, and the user's preferred audit depth and report format. Anything about the active brand — its keyword portfolio, ranking trends, crawl blocks, cannibalization findings — goes to the Brand Insights Ledger (Section 5) instead, never to agent memory.
