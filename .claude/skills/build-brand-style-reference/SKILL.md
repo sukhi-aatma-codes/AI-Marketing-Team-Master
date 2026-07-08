@@ -153,3 +153,12 @@ After saving, report to the user:
 - How many distinct styles were documented and from how many source images
 - Any style gaps (e.g. "no event/presentation visuals provided — that format isn't covered yet")
 - Whether aspirational styles were included or this is existing-only
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Style_Reference.md` — no other `_context\` file modified
+- [ ] Every hex code traces back to `Brand_Style.md` — no invented colors
+- [ ] Every style's "Look" description is specific enough to function as a generation brief on its own
+- [ ] Prompt starters are paste-ready prompt text, not chat instructions
+- [ ] Aspirational styles clearly separated from existing ones; no style invented from insufficient samples
+- [ ] Report delivered to the user: style count and source count, format gaps, aspirational inclusion

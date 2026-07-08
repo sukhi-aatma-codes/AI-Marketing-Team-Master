@@ -103,3 +103,12 @@ After saving, report to the user:
 - What sections were updated vs. left unchanged
 - Any fields marked `[TBD]` or `[ASSUMPTION]` that need user validation
 - Whether the file is ready for downstream agents or has gaps that block execution
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Context.md` — no other `_context\` file modified
+- [ ] Zero invented facts: every unverified stat or claim marked `[TBD]` or `[ASSUMPTION — confirm with client]`
+- [ ] Positioning statement present (marked `[SYNTHESIZED — confirm with client]` if not found in source)
+- [ ] Every ICP names a specific role and a specific pain point — no "decision makers" or "businesses"
+- [ ] No placeholder text or generic filler remains anywhere in the file
+- [ ] Report delivered to the user: sections updated, flags needing validation, downstream readiness

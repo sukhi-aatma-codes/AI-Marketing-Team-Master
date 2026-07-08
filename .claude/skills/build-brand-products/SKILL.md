@@ -135,3 +135,12 @@ After saving, report to the user:
 - Which product lines were updated, added, or flagged as unconfirmed
 - Any `[TBD]` proof points that need client input before copy agents can use them
 - Any ICPs that are still vague and need sharpening before content work begins
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Product_Offerings.md` — no other `_context\` file modified
+- [ ] Every capability described operationally, not as a marketing claim
+- [ ] Every ICP names a specific role and a specific pain point
+- [ ] Unverified proof points marked `[ASSUMPTION — confirm with client]`; non-public pricing marked `[INTERNAL]`
+- [ ] Products in the old file but absent from source flagged `[NOT FOUND IN SOURCE — confirm if still active]`
+- [ ] Report delivered to the user: lines updated/added/flagged, pending proof points, ICPs still too vague

@@ -70,7 +70,7 @@ Date: [yyyy-mm-dd]
 ---
 
 ## 1. Master Article Copy
-*Word Count: [Number] | Target Publication: [Forbes/Medium/LinkedIn]*
+*Word Count: [Number — if the user didn't specify, use the format default: LinkedIn article 800–1,200; op-ed 700–900; panel talking points one page / 5–7 bullets] | Target Publication: [Forbes/Medium/LinkedIn]*
 
 # [Headline - Visionary and outcome-led]
 

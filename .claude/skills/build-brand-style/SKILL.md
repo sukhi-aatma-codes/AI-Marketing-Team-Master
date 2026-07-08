@@ -189,3 +189,12 @@ After saving, report to the user:
 - What was extracted from source vs. proposed
 - Any `[TBD]` or `[PROPOSED]` fields that need confirmation before design work can begin
 - Any accessibility concerns flagged in the color palette
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Style.md` — no other `_context\` file modified
+- [ ] Every color is an exact hex code or `[TBD — hex needed]` — zero approximations
+- [ ] Every font named exactly (Google Fonts or licensed name) — no "similar to" descriptions
+- [ ] All proposed (non-extracted) values marked `[PROPOSED — confirm with client]`
+- [ ] Platform-specific notes present (social, paid ads, presentations)
+- [ ] Report delivered to the user: extracted vs. proposed, pending confirmations, accessibility flags

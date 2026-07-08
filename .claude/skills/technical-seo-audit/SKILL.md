@@ -131,3 +131,4 @@ Save as `output/seo/technical-seo-audit-<date>.pdf`.
 - [ ] Schema analysis lists specific missing properties, not just missing schema types
 - [ ] Priority Fix Matrix ranks items by true search visibility impact vs. implementation effort
 - [ ] PDF generated and saved to `output/seo/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value

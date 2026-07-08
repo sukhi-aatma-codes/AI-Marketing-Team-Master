@@ -54,7 +54,7 @@ Design high-performance search tags:
 Audit the visible page copy:
 - **Keyword Density:** Check for natural keyword integration in the first 100 words, body copy, and conclusion. Avoid keyword stuffing.
 - **Semantic Coverage:** Identify related topics, synonyms, and sub-questions searchers ask.
-- **E-E-A-T Compliance:** Add author signals, links to authoritative citations, and specific brand proof points.
+- **E-E-A-T Compliance** (Experience, Expertise, Authoritativeness, Trustworthiness — Google's page-quality framework): evidence each on-page — first-hand experience signals (original data, screenshots, "we tested" language); an author bio with relevant credentials; links to authoritative external citations; trust elements (contact/about links, specific brand proof points, no unverifiable claims). Check and add all four.
 - **Paragraph Length:** Break down long text blocks into readable 2–4 sentence paragraphs.
 
 ### Step 4 — Media & Rich Elements
@@ -129,3 +129,4 @@ Save as `output/seo/on-page-<page-slug>-<date>.docx`.
 - [ ] Word-for-word copy changes (before vs. after) provided for major sections
 - [ ] FAQ answers are self-contained and formatted for featured snippet capture
 - [ ] `.md` and `.docx` saved to `output/seo/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value

@@ -131,3 +131,4 @@ Save as `output/seo/keywords-<topic>-<date>.docx`.
 - [ ] Priority matrix populated — user can see what to tackle first vs. later
 - [ ] `.md` section headings match the structure above (blog-writer reads this file)
 - [ ] `.docx` generated and saved to `output/seo/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value

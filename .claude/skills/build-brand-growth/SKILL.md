@@ -179,3 +179,12 @@ After saving, report to the user:
 - Which sections were updated vs. left unchanged
 - How many `[TBD]` fields remain — and which ones block strategy or campaign planning
 - Whether the funnel benchmarks are complete enough for the data-analyst agent to use
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Growth_Marketing_Context.md` — no other `_context\` file modified
+- [ ] Every target is a specific number — no ranges or vague goals
+- [ ] MQL definition present (mandatory for campaign-strategist and data-analyst)
+- [ ] Unvalidated benchmarks marked `[UNVERIFIED — confirm from CRM/analytics]`
+- [ ] Every channel block includes "what's working / what to test next"
+- [ ] Report delivered to the user: updates, remaining `[TBD]` count and which block planning, benchmark completeness

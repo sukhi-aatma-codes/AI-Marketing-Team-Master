@@ -95,3 +95,11 @@ After saving, report to the user:
 - How many layouts the template includes and what each is for
 - Any elements flagged as not faithfully reproducible (Mode A) or proposed rather than
   extracted (Mode B)
+
+## Completion checklist
+
+- [ ] Both files saved: `_templates/Brand_Deck_Template.pptx` and `_templates/Brand_Deck_Template_Analysis.md` — nothing written to `_context\`
+- [ ] Every color and font in the `.pptx` matches `Brand_Style.md` (or the deck extraction) exactly
+- [ ] Every text element carries find-and-replace placeholder text; no embedded media introduced
+- [ ] Analysis file covers: color table, typography hierarchy, layout inventory, decorative vocabulary, reproducibility notes
+- [ ] Report delivered to the user: mode used, layout count and purposes, non-reproducible or proposed elements

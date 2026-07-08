@@ -79,3 +79,14 @@ Only write what you can substantiate from the raw inputs. Mark inferred or uncon
 * **Zero Fluff:** Avoid marketing jargon when writing brand rules. Write concrete, actionable guidelines (e.g., instead of "we write premium copy", specify "we use short headers, never exceed 3 sentences per paragraph, and use bullet points for lists over 3 items").
 * **No Invented Proof Points:** If customer counts, revenue numbers, or case study metrics are missing from the raw inputs, do not fabricate them. Use `[TBD]` placeholders and flag them in your onboarding summary.
 * **DOWNSTREAM FEASIBILITY:** Make sure the visual styles and offerings are described in enough detail that the `lp-builder`, `ad-creative`, and `social-creative-designer` skills can immediately consume them without needing further research.
+
+---
+
+## Self-check before delivery
+
+- [ ] All five core context files written to `_context\` with no placeholder text remaining
+- [ ] `Brand_Style_Reference.md` built via `build-brand-style-reference` (if samples existed) or flagged as an open gap — never invented
+- [ ] Deck template built via `build-brand-deck-template` or offered as Mode B — `_templates\` holds no prior brand's files
+- [ ] `Brand_Insights_Ledger.md` reset to clean sections and Section 1 seeded with substantiated insights only
+- [ ] Every unconfirmed fact across all files marked `[ASSUMPTION — confirm with client]` or `[TBD]` — zero invented proof points
+- [ ] Onboarding summary delivered: positioning, ICPs, visual identity, and open gaps needing user validation

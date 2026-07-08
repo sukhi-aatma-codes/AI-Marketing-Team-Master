@@ -45,7 +45,15 @@ Verify the news is structured in the standard "inverted pyramid" style:
 - **Media Contact Block:** Name, role, email, phone.
 
 ### Step 2 — Draft the Release
-Write the release in full, adhering to AP style guidelines:
+Write the release in full, adhering to AP style. Apply this house AP contract exactly — do not rely on a general sense of "AP style":
+- **Numerals:** spell out one through nine; figures for 10 and above. Always figures for percentages, money, and ages.
+- **Percent:** use the % sign with a figure ("25%", not "25 percent").
+- **Dateline:** `CITY, State/Country — Month D, YYYY —` in front of the lead sentence, city in all caps.
+- **Dates:** Month Day, Year. Abbreviate Jan., Feb., Aug., Sept., Oct., Nov., Dec. only with a specific date.
+- **Titles:** capitalize formal titles only directly before a name ("CEO Jane Doe"); lowercase after ("Jane Doe, chief executive officer,").
+- **Series commas:** no Oxford comma in simple series.
+- **Attribution:** use "said" — never "stated", "shared", "enthused", or "exclaimed".
+- **Company references:** a company is singular ("it"), never "they".
 - Avoid promotional marketing adjectives (e.g. "revolutionary", "best-in-class", "seamless").
 - Use active voice and third-person pronoun perspectives.
 - Ground all corporate claims in verifiable facts.
@@ -108,7 +116,7 @@ Save as `output/pr/press-release-<topic>-<date>.docx`.
 ## Quality checklist
 
 - [ ] Headline is in active voice, under 100 characters, and states the news clearly
-- [ ] Dateline is present and formatted in standard AP style
+- [ ] Dateline present in the exact format `CITY, State/Country — Month D, YYYY —` and every rule of the house AP contract above applied
 - [ ] Quotes sound like spoken commentary, not written brochures
 - [ ] Zero promotional hyperbole (no "seamless", "next-gen", or "disruptive")
 - [ ] Media contact block complete with name, title, email, and phone

@@ -42,13 +42,12 @@ Inspect or design the site's robots.txt configurations to handle specialized AI 
 
 ### Step 2 — llms.txt & llms-full.txt Design
 Create structured index files to make the site machine-readable for LLMs:
-- **llms.txt:** Create a concise Markdown file at the root containing a short company description, key links (pricing, services, docs), and summaries of core pages.
+- **llms.txt:** Create a concise Markdown file at the site root following the llms.txt convention structure: an H1 with the company/site name; a blockquote one-line summary; optional short context paragraphs; then H2 sections each holding a bulleted link list in the form `- [Page name](url): one-line description` (grouped by pricing, services, docs, key content); optionally a final `## Optional` H2 section for links an AI may skip under tight context budgets.
 - **llms-full.txt:** Generate a complete list of important content pages, including estimated token counts for each page.
-- Refer to conventions documented in answer.ai/llms.txt.
 
 ### Step 3 — Token Budgeting
 Calculate token limits for key pages:
-- Estimate the token size of priority pages (visible text, alt tags, sitemaps, headers).
+- Estimate the token size of priority pages (visible text, alt tags, sitemaps, headers) using the ≈4 characters-per-token proxy: character count of the extracted text ÷ 4. State the method in the report so estimates are reproducible.
 - Tag pages that exceed limits (e.g., >15,000 tokens for quick starts, >8,000 tokens for landing pages).
 - Suggest chunking, page splitting, or TL;DR additions to prevent truncation in AI context windows.
 
@@ -111,6 +110,7 @@ Score: X/12 (Target: >9/12)
 
 - [ ] All major AI crawler user-agents (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended) addressed
 - [ ] Complete llms.txt Markdown template written out (no placeholder text in key links)
-- [ ] Token budgets estimated using standard tokenizer guidelines (not arbitrary word counts)
+- [ ] Token budgets estimated with the ≈4 characters-per-token proxy (method stated in the report — never arbitrary word counts)
 - [ ] Direct directives provided for robots.txt modifications
 - [ ] Output saved to `output/seo/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value

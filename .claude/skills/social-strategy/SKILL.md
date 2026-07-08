@@ -26,7 +26,7 @@ Confirm with the user (unless specified):
 1. **Campaign Objective:** Is the goal awareness, lead generation, website traffic, event registration, or thought leadership?
 2. **Target Platform(s):** LinkedIn (Company / Personal profiles), Twitter/X, or other platforms.
 3. **Hero Content / Topic:** What core topic, blog post, report, or announcement is the campaign promoting?
-4. **Duration & Frequency:** How long is the campaign (e.g., 2 weeks, 4 weeks) and how many posts per platform (e.g., 3 posts per week)?
+4. **Duration & Frequency:** How long is the campaign (e.g., 2 weeks, 4 weeks) and how many posts per platform (e.g., 3 posts per week)? If unspecified, default to a 4-week window with LinkedIn 3–4 posts/week, Twitter/X 5–7 posts/week, Instagram 2–3 posts/week — and flag these as defaults for the user to confirm.
 5. **Creative Format Preference:** Text-only, single image, graphic card, PDF document slide/carousel, or short video.
 
 ## Platform Strategy Rules

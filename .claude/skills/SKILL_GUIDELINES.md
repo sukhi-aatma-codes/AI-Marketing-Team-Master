@@ -68,3 +68,14 @@ All skills must route their final output strictly to the appropriate workspace f
 | Articles, blog copies, landing pages | `output\pages\` |
 | Research indices, SEO terms, analyses | `output\seo\` or `output\reports\` |
 | Channel scheduling, social posts | `output\social\` |
+
+---
+
+## 4. Model-Portability Rules
+
+These rules exist so outputs stay consistent regardless of which model executes a skill. A stronger model fills gaps with good judgment; a weaker or different model fills them with drift. Every skill must therefore make its quality bar explicit rather than implied:
+
+1. **Verifiable completion checklist.** Every skill ends with a `- [ ]` checkbox checklist whose items are objectively checkable (files exist at exact paths, flags present, limits verified) — never prose-only quality rules.
+2. **Defaults for every judgment point.** Wherever the skill requires a choice the user may not specify (word count, slide count, frequency, timeline, variant count), state a concrete default and instruct flagging it as a default to confirm.
+3. **No undefined named conventions.** Never rely on the model "knowing" a named standard ("AP style", "E-E-A-T", "best practices"). Define the applicable rules inline, or cite an exact file in this repo that defines them.
+4. **Never fabricate unfetchable data.** Skills that report researched or measured values must mark anything not actually retrieved as `[DATA UNAVAILABLE — <what was needed>]` — a plausible-sounding estimate presented as data is a defect, not a fallback.

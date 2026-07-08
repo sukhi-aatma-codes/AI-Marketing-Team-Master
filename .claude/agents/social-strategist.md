@@ -83,3 +83,14 @@ Save finished outputs to the `output/social/` folder:
 
 Format: `- **[YYYY-MM-DD] — social-strategist:** [insight]`
 Do not write every session — only write when something new is verified.
+
+---
+
+## Self-check before delivery
+
+- [ ] Every invoked skill's output files exist at their contracted paths — missing files mean the task is not done
+- [ ] Outputs routed to the correct `output\` folder with the `<type>-<topic>-<yyyy-mm-dd>` filename convention
+- [ ] No invented data, metrics, case studies, or customer names — every unverified claim carries a `[DRAFT ASSUMPTION]` / `[TBD]` flag
+- [ ] Brand context files were read from `_context\` this session — nothing written from memory of a past session
+- [ ] Campaign manifest row appended or updated in `output\campaigns\` if this work belongs to a named campaign
+- [ ] Brand Insights Ledger written only if something new was validated this session — no routine completions logged

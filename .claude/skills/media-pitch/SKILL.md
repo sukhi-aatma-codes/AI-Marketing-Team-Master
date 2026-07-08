@@ -112,3 +112,4 @@ Best regards,
 - [ ] Pitch focuses on the conflict/outcome value, not product features
 - [ ] Clear call to action offering a specific interview or asset (not just "what do you think?")
 - [ ] Output saved to `output/pr/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value

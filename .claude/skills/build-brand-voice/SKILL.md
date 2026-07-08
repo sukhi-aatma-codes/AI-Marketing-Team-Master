@@ -125,3 +125,12 @@ After saving, report to the user:
 - What sections were updated vs. left unchanged
 - Any rules marked `[INFERRED]` that need validation
 - Any gaps (e.g., no CTA examples found) that block content agents from using the file immediately
+
+## Completion checklist
+
+- [ ] File saved to exactly `_context/Brand_Voice_Guide.md` — no other `_context\` file modified
+- [ ] Every rule is a constraint a writer can apply without asking what it means — no aspirational adjectives
+- [ ] Banned words/jargon list present and specific
+- [ ] 2–3 "Write this / not that" example pairs included
+- [ ] All inferred rules marked `[INFERRED — confirm]`
+- [ ] Report delivered to the user: updates, inferred rules needing validation, gaps blocking content agents

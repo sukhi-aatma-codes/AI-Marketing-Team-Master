@@ -85,3 +85,11 @@ Save to: `_samples\INDEX.md`
 After saving, report to the user a one-line summary per category (e.g. "12 visual style
 sources, 3 deck sources, 5 voice/messaging sources, 1 unclassified") and recommend which
 downstream skill(s) to run next.
+
+## Completion checklist
+
+- [ ] Index saved to `_samples\INDEX.md` only — no `_context\` file touched
+- [ ] Every file in `_samples\` (excluding `_reference-examples\`) appears exactly once in the index
+- [ ] Files that couldn't be confidently classified are in "Unclassified" with a note — not guessed
+- [ ] Re-runs refreshed existing entries rather than duplicating them
+- [ ] Report delivered to the user: one-line summary per category plus recommended next skill(s)

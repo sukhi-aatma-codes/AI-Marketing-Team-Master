@@ -93,3 +93,14 @@ Do not declare done until at least one fix-and-verify cycle has run.
 - Don't add icons, illustrations, gradients, or background patterns unless the analysis explicitly permits them.
 - Don't fill slides with bullet lists. Use the visual layouts the template offers.
 - Don't fabricate stats, case studies, or quotes. If the brief is missing proof points, ask the user.
+
+## Completion checklist
+
+- [ ] `.pptx` saved to the agreed folder (default `output/presentations/`) — and PDF exported alongside it if the calling skill requires one (non-zero file size confirmed)
+- [ ] Every fill, stroke, and text color appears in the analysis file's palette table — no off-palette colors
+- [ ] Only the typeface(s) named in the analysis used — no Arial/Calibri substitutions
+- [ ] Every slide matches a named layout from the analysis (or is a deliberate, justified composite)
+- [ ] Wordmark, footer band, and page numbers placed per the analysis's recurring-elements spec
+- [ ] Zero leftover placeholder text (`[IMAGE PLACEHOLDER]`, `XXXX`, lorem ipsum, "Section Title Goes Here")
+- [ ] At least one fix-and-verify cycle run after the visual inspection pass
+- [ ] Summary note delivered: layouts used, slides needing data confirmation, open questions

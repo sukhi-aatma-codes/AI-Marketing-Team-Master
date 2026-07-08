@@ -113,3 +113,5 @@ Total Prompts Tested: [Number]
 - [ ] Lost prompt analysis diagnoses specific structural reasons for competitor citations (avoid generic "write better content")
 - [ ] Fix pack assigns clear priority (P1, P2...) based on expected visibility impact
 - [ ] Output saved to `output/seo/`
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value
+- [ ] Engines that were not actually queried are marked `[DATA UNAVAILABLE]` in the scorecard — results from one engine are never extrapolated to another

@@ -107,3 +107,4 @@ Tell the user: the `.md` is ready for use by keyword-research or campaign-brief 
 - [ ] `.md` section headings match the structure above (for agent handoff compatibility)
 - [ ] PDF generated and saved to `output/reports/`
 - [ ] Sources section populated with URLs and access dates
+- [ ] Every reported data point was actually retrieved — anything that could not be fetched or verified is marked `[DATA UNAVAILABLE — <what was needed>]`, never estimated or filled with a plausible-sounding value
