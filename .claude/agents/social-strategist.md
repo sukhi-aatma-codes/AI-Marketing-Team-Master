@@ -45,14 +45,14 @@ Prepare inputs, then call the Skill tool with the correct skill name. Do not wri
 |---|---|---|
 | Organic social calendar / campaign strategy | `social-strategy` | campaign topic, target platforms, duration, frequency, primary CTA |
 | Platform-specific post copy | `social-copy` | copy brief, promotion target, channels, tone parameters, key hashtags |
-| Visual design spec / layout brief | `social-creative-designer` | graphic format (card/carousel), dimensions, copy overlay, recommended color hexes |
+| Social graphics / carousel production (Ideogram + Canva) | `social-creative-designer` | graphic format (card/carousel), platform, topic, style from `_context/Brand_Style_Reference.md`, copy overlay |
 
 ### Output formats each skill produces
 
 Confirm the deliverable is complete by verifying these files exist after skill execution:
 - `social-strategy` → `output/social/calendar-<topic>-<date>.md` + `output/social/calendar-<topic>-<date>.docx`
-- `social-copy` → `output/social/posts-<topic>-<date>.md` + `output/social/posts-<topic>-<date>.docx`
-- `social-creative-designer` → `output/social/creative-spec-<topic>-<date>.md`
+- `social-copy` → `output/social/copy-<topic>-<date>.md` + `output/social/copy-<topic>-<date>.docx`
+- `social-creative-designer` → final PNG graphics: `output/social/social-<topic-slug>-slide-<N>-<yyyy-mm-dd>.png` per carousel slide, or `output/social/social-<topic-slug>-<yyyy-mm-dd>.png` for single images
 
 ---
 

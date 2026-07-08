@@ -65,7 +65,7 @@ Produce a self-contained HTML file:
 - Load brand font from Google Fonts (font name from `Brand_Style.md`); use for all labels and title
 - Include chart title, axis labels, data source annotation
 - Enable tooltips with hover; enable legend if multiple series
-- Add a thin navy border radius on bar charts for polish
+- Add a thin border (brand primary color, slight radius) on bar charts for polish
 - The HTML file must work by double-clicking — no server, no Python, no build step
 
 Save as `output/reports/dataviz-<topic>-<date>.html`
@@ -104,7 +104,7 @@ Read this file and adapt it rather than writing chart code from scratch.
 ## Quality checklist
 
 - [ ] Chart type matches the data story — rationale stated in `.md`
-- [ ] Brand colors applied correctly (navy primary, red accent)
+- [ ] Brand colors applied correctly (primary and accent hex values loaded from `_context/Brand_Style.md` — never hardcoded)
 - [ ] HTML file is self-contained — opens in browser without any server or extra files
 - [ ] Chart has title, axis labels, and source annotation
 - [ ] Data in the `.md` matches data in the chart exactly — no rounding differences
