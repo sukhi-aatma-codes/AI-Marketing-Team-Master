@@ -247,6 +247,23 @@ Applies `campaign-report` + `data-visualization` in sequence — delegate when a
 
 ---
 
+### `decision-council` (cross-cutting skill, not an agent)
+
+Unlike the agents above, `decision-council` isn't tied to a single sub-function — it's a
+pressure-test layer any agent (or the user directly) can invoke on a decision another
+agent has already scoped, before that decision gets locked in. It doesn't produce
+deliverables; it evaluates a fork-in-the-road choice (pricing, positioning, channel bet,
+market entry, crisis stance) already surfaced by `campaign-strategist`, `abm-account-plan`,
+`crisis-response`, or similar.
+
+**Don't invoke when:**
+- The decision has already been made and the user just wants the deliverable written — go
+  straight to `content-creator` / `creative-designer` / the relevant skill.
+- There's no genuine fork with real stakes (routine copy choices, single-right-answer
+  questions) — see the skill's own trigger guidance.
+
+---
+
 ### Typical agent pipelines
 
 These are the natural multi-agent sequences for common marketing workflows. Each agent's `.md` output feeds the next:
@@ -258,7 +275,7 @@ These are the natural multi-agent sequences for common marketing workflows. Each
 | SEO content push | `market-researcher` → `content-creator` (blog-writer + lp-builder) |
 | Paid campaign | `campaign-strategist` → `creative-designer` (ad creatives) → `content-creator` (landing page) |
 | Performance review | `data-analyst` → `campaign-strategist` (next campaign inputs) |
-| New market entry | `market-researcher` → `campaign-strategist` → `content-creator` |
+| New market entry | `market-researcher` → `campaign-strategist` → `decision-council` (validate the entry call) → `content-creator` |
 | SEO overhaul | `seo-specialist` → `content-creator` (content gap execution) |
 | AI visibility push | `seo-specialist` (aeo-foundations) → `ai-citation-strategist` |
 | PR campaign | `pr-comms` → `content-creator` + `social-strategist` (amplification) |
