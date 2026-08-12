@@ -29,6 +29,7 @@ d:\Marketing-Team-Agentic-AI\AI Marketing Team Master\
     ├── output\podcasts\       ← podcast episode briefs, outline scripts, show notes
     ├── output\webinars\       ← webinar plans, agendas, speaker briefs, promotion timelines, follow-up outlines
     ├── output\campaigns\      ← one manifest per campaign: the asset index that reconnects deliverables scattered across the type folders
+    ├── output\trend-scan\     ← engagement-ranked trend scan briefs (raw evidence, dated)
     └── output\ideogram_output\ ← intermediate: raw Ideogram-generated images (working files only — finals go to output\social\)
 ```
 
@@ -71,6 +72,7 @@ Save finished outputs to the folder that matches the deliverable type:
 | Podcast episode briefs, outline scripts, show notes | `output\podcasts\` |
 | Webinar plans, agendas, speaker briefs, promotion timelines, follow-up outlines | `output\webinars\` |
 | ABM account plans, lead generation funnel strategy | `output\reports\` |
+| Trend scan briefs (raw, engagement-ranked evidence) | `output\trend-scan\` |
 
 Use clear filenames: `<type>-<topic>-<yyyy-mm-dd>.md` (or `.pptx`, `.pdf` as appropriate). Use the template in `_templates\` when producing enterprise decks.
 
